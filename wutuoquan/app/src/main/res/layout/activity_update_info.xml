@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="#F5F5F5">
+
+
+        <net.skjr.wtq.ui.widgets.ClearableEditText
+            android:id="@+id/nickname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="12dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="请输入新的昵称"
+            android:textColorHint="@color/detail_font_lightcolor"
+            android:paddingLeft="8dp"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:onClick="onSubmitNickNameClick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/wealth_list_shape2"
+        android:shadowColor="@color/app_background"
+        android:text="保存"
+        android:textColor="@color/mine_white"
+        android:textSize="18sp"/>
+
+</LinearLayout>

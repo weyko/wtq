@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="130dp"
+                  android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center_vertical">
+
+        <net.skjr.wtq.ui.widgets.RadiusImageView
+            android:id="@+id/chouzi_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/chouzi_blank"/>
+
+            <net.skjr.wtq.ui.widgets.RadiusImageView
+                android:id="@+id/project_state"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:layout_gravity="bottom"
+                android:src="@drawable/wtzd_czz"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:padding="14dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/chouzi_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="@dimen/project_title_font"
+                    android:textColor="@color/actionbar_font_color"
+                    android:text="环球大酒店"/>
+                <TextView
+                    android:id="@+id/chouzi_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/project_type_no"
+                    android:textSize="@dimen/project_title_font1"
+                    android:text="收益型"/>
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/chouzi_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:drawableLeft="@drawable/ic_city_location"
+                android:textSize="@dimen/project_title_font1"
+                android:textColor="@color/detail_font_lightcolor"
+                android:drawablePadding="3dp"
+                android:text="广东 广州"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <ProgressBar
+                android:id="@+id/chouzi_progress"
+                android:layout_width="0dp"
+                android:layout_height="6dp"
+                android:layout_weight="4"
+                android:layout_marginRight="5dp"
+                android:layout_gravity="center_vertical"
+                style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+                android:progressDrawable="@drawable/progressbar"
+                android:progress="45"/>
+                <TextView
+                    android:id="@+id/chouzi_text_progress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#FFB24B"
+                    android:text="45%"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/money"/>
+                    <TextView
+                        android:id="@+id/chouzi_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/detail_font_lightcolor"
+                        android:text="500万"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/user"/>
+                    <TextView
+                        android:id="@+id/chouzi_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/detail_font_lightcolor"
+                        android:text="500人"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/time"/>
+                    <TextView
+                        android:id="@+id/chouzi_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/detail_font_lightcolor"
+                        android:text="20天"/>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <variable
+            name="model"
+            type="net.skjr.wtq.viewmodel.Register1ViewModel"/>
+    </data>
+<LinearLayout
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+    <include layout="@layout/regist1_top"/>
+
+    <!--输入手机号-->
+    <LinearLayout
+        android:id="@+id/login_bar1"
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="@dimen/login_input_margin"
+        android:background="#F5F5F5">
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/zhuc_sj"
+            />
+
+        <net.skjr.wtq.ui.widgets.ClearableEditText
+            android:id="@+id/phone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingStart="12dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="请输入手机号"
+            android:textColorHint="@color/detail_font_lightcolor"
+            android:inputType="number"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:text="@={model.phone}"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+    <!--输入验证码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/login_bar31"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1.9"
+            android:layout_marginRight="5dp"
+            android:background="#F5F5F5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/zhuc_dxyzm"
+                />
+
+            <EditText
+                android:id="@+id/regist_pic_code"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="4dp"
+                android:paddingStart="12dp"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="请输入验证码"
+                android:textColorHint="@color/detail_font_lightcolor"
+                android:paddingLeft="8dp"
+                android:singleLine="true"
+                android:text="@={model.verifycode}"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/login_bar32"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1.1"
+            android:background="#fff">
+
+            <ImageView
+                android:id="@+id/regist_imgverify"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--短信验证码-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1.9"
+            android:layout_marginRight="5dp"
+            android:background="#F5F5F5">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/zhuc_dxyzm"
+                />
+
+            <EditText
+                android:id="@+id/regist_sms_code"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="4dp"
+                android:paddingStart="12dp"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="请输入短信验证码"
+                android:textColorHint="@color/detail_font_lightcolor"
+                android:paddingLeft="8dp"
+                android:singleLine="true"
+                android:inputType="number"
+                android:text="@={model.smsverify}"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:onClick="onSmsCaptchaClick"
+            android:clickable="true"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="24dp"
+            android:layout_weight="1.1"
+            android:background="#fff">
+
+            <TextView
+                android:id="@+id/smscode"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:adjustViewBounds="true"
+                android:gravity="center"
+                android:textColor="@color/whole_style_color"
+                android:background="@drawable/sms_code_shape"
+                android:text="获取短信验证码"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+        <CheckBox
+            android:id="@+id/regist_read_protocol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox_selector"
+            android:drawablePadding="10dp"
+            android:textColor="@color/detail_font_lightcolor"
+            android:text="阅读并同意"/>
+        <TextView
+            android:onClick="onTocolClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/whole_style_color"
+            android:text="《乌托圈服务协议》"/>
+
+    </LinearLayout>
+
+    <Button
+        android:onClick="onRegist1Click"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/wealth_list_shape2"
+        android:shadowColor="@color/app_background"
+        android:text="下一步"
+        android:textColor="@color/mine_white"
+        android:textSize="18sp"/>
+
+
+
+</LinearLayout>
+
+</layout>

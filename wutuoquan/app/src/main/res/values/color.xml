@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_background">#ffffff</color>
+    <color name="tabbar_color">#ffffff</color>
+    <color name="actionbar_color">#ffffff</color>
+    <color name="actionbar_font_color">#333333</color>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#61c130</color>
+    <!--tab页与内容页分割线的颜色-->
+    <color name="tabbar_topline_color">#ffcccccc</color>
+    <color name="tabbar_font_color">#c8a064</color>
+    <color name="tabbar_font_color_normal">#8E8E8E</color>
+
+    <color name="mine_gray1">#ff666666</color>
+    <color name="mine_gray2">#cccccc</color>
+    <color name="mine_gray3">#888888</color>
+    <color name="mine_gray4">#ffeeeeee</color>
+    <color name="mine_gray5">#fff7f7f7</color>
+    <color name="mine_white">#ffffff</color>
+    <color name="mine_white1">#fff8f8f8</color>
+    <color name="mine_black1">#ff111111</color>
+    <color name="mine_yellow1">#ffd37c00</color>
+    <color name="mine_yellow2">#fffff5df</color>
+    <color name="mine_yellow3">#fffff5df</color>
+    <color name="mine_yellow4">#ffff6400</color>
+    <color name="mine_yellow4_pressed">#ff642300</color>
+    <color name="mine_yellow5">#ffff8c00</color>
+    <color name="mine_pink">#ffff4978</color>
+    <color name="mine_green">#ff82c64f</color>
+    <color name="mine_green2">#ff288c14</color>
+    <color name="mine_green3">#ff06bf04</color>
+    <color name="mine_red1">#f55000</color>
+    <!--登录注册页面-->
+    <color name="login_btn_bg">#00f</color>
+    <color name="regist_btn_bg">#ffffff</color>
+    <!--项目条目类型字体颜色-->
+    <color name="project_type_no">#E05050</color>
+    <color name="project_type_yes">#47B604</color>
+    <!--布局分割线颜色-->
+    <color name="divider_color">#f8f8f8</color>
+    <color name="divider_color1">#f5f5f5</color>
+    <color name="divider_color_dark">#DDDDDD</color>
+
+    <!--项目详情 字体浅颜色-->
+    <color name="detail_font_lightcolor">#999</color>
+    <!--项目主题色-->
+    <color name="whole_style_color">#DAB074</color>
+    <!--特殊金额颜色-->
+    <color name="money_count">#FF5E2D</color>
+
+    <!--项目状态色-->
+    <!--预热中-->
+    <color name="status_yure">#FFA726</color>
+    <!--筹资中-->
+    <color name="status_chouzi">#29B6F6</color>
+    <!--已分红-->
+    <color name="status_fenhong">#FF7043</color>
+    <!--已解散-->
+    <color name="status_jiesan">#A3A5A8</color>
+    <!--筹资成功-->
+    <color name="status_chenggong">#AEC785</color>
+    <!--筹资失败-->
+    <color name="status_shibai">#8E9093</color>
+    <!--已撤销-->
+    <color name="status_chexiao">#737578</color>
+
+</resources>

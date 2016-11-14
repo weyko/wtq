@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/invest_progress"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_centerInParent="true"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/invest_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+<ScrollView
+    xmlns:CircleIndicator="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/invest_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+        <net.skjr.wtq.ui.widgets.CircleIndicator
+            android:id="@+id/invest_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            CircleIndicator:ci_background="#333"
+            CircleIndicator:ci_selected_background="@color/whole_style_color"
+            CircleIndicator:ci_mode="outside"
+            CircleIndicator:ci_radius="4dp"
+            CircleIndicator:ci_margin="8dp"/>
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="17dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/invest_newbee"
+            style="@style/invest_text_style"
+            android:drawableTop="@drawable/newbee"
+            android:text="新人学堂"/>
+        <TextView
+            android:id="@+id/invest_wealth_list"
+            style="@style/invest_text_style"
+            android:drawableTop="@drawable/wealth"
+            android:text="财富榜"/>
+        <TextView
+            android:id="@+id/invest_genius"
+            style="@style/invest_text_style"
+            android:drawableTop="@drawable/genius"
+            android:text="管理牛人"/>
+        <TextView
+            android:id="@+id/invest_brands"
+            style="@style/invest_text_style"
+            android:drawableTop="@drawable/brand"
+            android:text="入驻品牌"/>
+    </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f8f8f8"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:textSize="@dimen/project_title_font"
+                android:textColor="@color/actionbar_font_color"
+                android:text="筹资中的项目"/>
+            <TextView
+                android:id="@+id/all_project1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/detail_font_lightcolor"
+                android:textSize="@dimen/project_title_font1"
+                android:drawableRight="@drawable/mine_toview"
+                android:drawablePadding="5dp"
+                android:text="全部"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"/>
+
+        <net.skjr.wtq.ui.widgets.MyListView
+            android:id="@+id/invest_chouzi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/divider_color"/>
+
+        <!--预热项目-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:textSize="@dimen/project_title_font"
+                android:textColor="@color/actionbar_font_color"
+                android:text="预热中的项目"/>
+            <TextView
+                android:id="@+id/all_project2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/detail_font_lightcolor"
+                android:textSize="@dimen/project_title_font1"
+                android:drawableRight="@drawable/mine_toview"
+                android:drawablePadding="5dp"
+                android:text="全部"/>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"/>
+
+        <net.skjr.wtq.ui.widgets.MyListView
+            android:id="@+id/invest_yure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f8f8f8"/>
+
+        <!--筹资统计-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/project_count"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:orientation="vertical"
+                android:background="@drawable/count_bg">
+                <TextView
+                    android:id="@+id/count_pro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/whole_style_color"
+                    android:textSize="@dimen/project_title_font"
+                    android:text="56个"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/zhongchou_pro"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/project_title_font1"
+                    android:text="众筹项目"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/project_count"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:orientation="vertical"
+                android:background="@drawable/count_bg">
+                <TextView
+                    android:id="@+id/count_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/whole_style_color"
+                    android:textSize="@dimen/project_title_font"
+                    android:text="53,426.00万元"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/count_money"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/project_title_font1"
+                    android:text="筹资总额"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/project_count"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:orientation="vertical"
+                android:background="@drawable/count_bg">
+                <TextView
+                    android:id="@+id/count_fenhong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/whole_style_color"
+                    android:textSize="@dimen/project_title_font"
+                    android:text="695.00万元"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/count_fenhong"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/project_title_font1"
+                    android:text="分红总额"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/project_count"
+                android:layout_weight="1"
+                android:layout_margin="3dp"
+                android:orientation="vertical"
+                android:background="@drawable/count_bg">
+                <TextView
+                    android:id="@+id/count_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/whole_style_color"
+                    android:textSize="@dimen/project_title_font"
+                    android:text="6,852人"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/count_user"
+                    android:layout_gravity="center_horizontal"
+                    android:drawablePadding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/project_title_font1"
+                    android:text="投资人"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <!--我有项目-->
+        <ImageView
+            android:id="@+id/invest_havepro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/new_pro"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/telephone"/>
+
+</LinearLayout>
+</ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

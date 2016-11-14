@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/find_trade_pwd_phone"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:background="@drawable/edit_bg"
+        android:gravity="center_vertical"
+        android:text="138****0000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:layout_weight="1.9"
+                android:layout_marginRight="10dp"
+                android:background="#F5F5F5">
+
+                <EditText
+                    android:id="@+id/find_trade_pwd_code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="12dp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="短信验证码"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:onClick="onSmsCaptchaClick"
+                android:clickable="true"
+                android:layout_width="0dp"
+                android:layout_height="46dp"
+                android:layout_gravity="center"
+                android:layout_weight="1.1"
+                android:background="#fff">
+
+                <TextView
+                    android:id="@+id/smscode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:adjustViewBounds="true"
+                    android:gravity="center"
+                    android:textColor="@color/whole_style_color"
+                    android:background="@drawable/sms_code_shape"
+                    android:text="获取短信验证码"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <Button
+            android:onClick="onNextClick"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/wealth_list_shape2"
+            android:shadowColor="@color/app_background"
+            android:text="下一步"
+            android:textColor="@color/mine_white"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

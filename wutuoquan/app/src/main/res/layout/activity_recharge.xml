@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/divider_color"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--可用余额-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detail_font"
+                    android:textColor="@color/actionbar_font_color"
+                    android:text="可用余额："/>
+                <TextView
+                    android:id="@+id/recharge_aval_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/detail_font"
+                    android:textColor="@color/money_count"
+                    android:text="0.00元"/>
+            </LinearLayout>
+
+            <!--输入充值金额-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/publish_edit_height"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_bg"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/recharge_num"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:background="@null"
+                    android:inputType="numberDecimal"
+                    android:textSize="@dimen/publish_font_size"
+                    android:hint="请输入充值金额"
+                    android:text=""/>
+
+                <TextView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_vertical"
+                    android:padding="9dp"
+                    android:text="元"/>
+            </LinearLayout>
+
+            <!--微信支付-->
+            <CheckBox
+                android:id="@+id/recharge_pay_type1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:button="@null"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@drawable/checkbox_selector"
+                android:drawablePadding="10dp"
+                android:text="微信支付"/>
+            <!--连连支付-->
+            <CheckBox
+                android:id="@+id/recharge_pay_type2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:button="@null"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@drawable/checkbox_selector"
+                android:drawablePadding="10dp"
+                android:text="连连支付"/>
+
+            <Button
+                android:onClick="recharge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="15dp"
+                android:background="@color/whole_style_color"
+                android:shadowColor="@color/app_background"
+                android:text="充值"
+                android:textColor="@color/mine_white"
+                android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    <include layout="@layout/toolbar"/>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:background="@color/actionbar_color">
+
+    <ImageView
+        android:id="@+id/toolbarBack"
+        android:layout_width="@dimen/toolbar_height"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_gravity="left|center_vertical"
+        android:paddingBottom="@dimen/toolbar_padding"
+        android:paddingRight="@dimen/toolbar_padding"
+        android:paddingTop="@dimen/toolbar_padding"
+        android:src="@drawable/cfb_fh"
+        />
+
+    <TextView
+        android:id="@+id/toolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/actionbar_font_color"
+        android:textSize="20sp"/>
+
+    <ImageView
+        android:id="@+id/toolbarRightImage"
+        android:layout_width="@dimen/toolbar_height"
+        android:layout_height="@dimen/toolbar_height"
+        android:layout_gravity="right|center_vertical"
+        android:padding="12dp"
+        android:src="@drawable/cfb_fh"/>
+
+    <!--<View-->
+        <!--android:id="@+id/toolbarLine"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:background="@color/app_background3"/>-->
+</FrameLayout>

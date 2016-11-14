@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/divider_color"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar_reply"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/detail_font_lightcolor"
+        android:text="请留下您的联系方式"/>
+
+        <net.skjr.wtq.ui.widgets.ClearableEditText
+            android:id="@+id/feed_contact"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:paddingStart="12dp"
+            android:background="@drawable/edit_bg1"
+            android:ellipsize="end"
+            android:hint="手机号/邮箱/QQ"
+            android:textColorHint="@color/detail_font_lightcolor"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textSize="15sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="15sp"
+        android:textColor="@color/detail_font_lightcolor"
+        android:text="请留下您的宝贵意见"/>
+
+    <EditText
+        android:id="@+id/feed_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_bg1"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:enabled="true"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:minLines="18"
+        android:maxLines="20"
+        android:scrollbars="vertical"
+        android:textSize="@dimen/publish_font_size"
+        android:padding="8dp"
+        android:hint=""
+        android:textColorHint="@color/detail_font_lightcolor"/>
+
+</LinearLayout>

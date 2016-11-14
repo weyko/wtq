@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingBottom="10dp">
+
+    <ImageView
+        android:id="@+id/head"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:src="@drawable/mine_head"/>
+
+    <LinearLayout
+        android:id="@+id/discuss_man"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/head"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/discuss_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/actionbar_font_color"
+                android:text="昵称"/>
+            <TextView
+                android:id="@+id/discuss_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:textSize="14sp"
+                android:textColor="@color/detail_font_lightcolor"
+                android:text="15分钟前"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/discuss_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="14sp"
+            android:textColor="@color/actionbar_font_color"
+            android:layout_marginBottom="35dp"
+            android:text="@string/warnniing1"/>
+
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/investor_reply_body"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discuss_man"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginTop="-20dp"
+            android:padding="10dp"
+            android:background="#11000000"
+            android:orientation="horizontal">
+        <TextView
+            android:id="@+id/investor_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/money_count"
+            android:textSize="14sp"
+            android:text="筹资人回复：哈哈哈哈啊哈啊哈说的话发货撒地方好啊收到回复哈师大"/>
+
+        </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/discuss_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textSize="14sp"
+        android:textColor="@color/detail_font_lightcolor"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/pingl_icon_hf"
+        android:drawablePadding="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="7dp"
+        android:layout_marginRight="5dp"
+        android:text="回复"/>
+
+</RelativeLayout>
+</LinearLayout>

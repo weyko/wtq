@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+              android:paddingBottom="12dp"
+              android:paddingTop="24dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:text="新版本升级"
+        android:textColor="@color/mine_red1"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center_vertical"
+        android:maxLines="5"
+        android:minLines="1"
+        android:text="1.新结构，新页面\n2.自动推荐理财师，主动选择自己喜好\n3.资讯中心内容更有料，投资更有用\n4.优化个基分享功能"
+        android:textSize="16sp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="#0f0"
+            android:shadowColor="@color/app_background"
+            android:text="取消"
+            android:textColor="@color/mine_white"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:background="#0f0"
+            android:shadowColor="@color/app_background"
+            android:text="确定"
+            android:textColor="@color/mine_white"
+            android:textSize="18sp"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

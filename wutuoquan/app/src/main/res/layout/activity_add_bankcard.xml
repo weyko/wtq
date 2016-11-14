@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="net.skjr.wtq.viewmodel.AddBankCardViewModel"/>
+    </data>
+<LinearLayout
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/app_background"
+            android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#FFE9B0"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:textColor="@color/money_count"
+            android:text="请添加您本人的银行卡"/>
+
+
+            <TextView
+                android:id="@+id/card_add_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@={model.username}"
+                android:textSize="16sp"/>
+
+            <RelativeLayout
+                android:onClick="onSelectBankClick"
+                android:layout_width="fill_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_bg">
+
+                <TextView
+                    android:id="@+id/bank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="32dp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请选择所属银行"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true"
+                    android:text="@={model.bank}"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/bank"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_action_expand"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_bg">
+
+                <net.skjr.wtq.ui.widgets.ClearableEditText
+                    android:id="@+id/card_add_number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="32dp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入银行账号"
+                    android:inputType="number"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true"
+                    android:text="@={model.accountCard}"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:onClick="onSelectCity1Click"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg">
+
+                    <TextView
+                        android:id="@+id/city1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="32dp"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="省"
+                        android:paddingLeft="8dp"
+                        android:singleLine="true"
+                        android:text="@={model.province}"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@+id/city1"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_action_expand"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:onClick="onSelectCity2Click"
+                    android:layout_width="fill_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg">
+
+                    <TextView
+                        android:id="@+id/city2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="32dp"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="市"
+                        android:paddingLeft="8dp"
+                        android:singleLine="true"
+                        android:text="@={model.city}"
+                        android:textSize="16sp"/>
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@+id/city2"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_action_expand"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_bg">
+
+                <net.skjr.wtq.ui.widgets.ClearableEditText
+                    android:id="@+id/card_add_bank_branch"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="32dp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入所属支行"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true"
+                    android:text="@={model.zhihang}"
+                    android:textSize="16sp"/>
+
+                <!--<ImageView
+                    android:id="@+id/card_add_bank_branch_image"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignRight="@+id/card_add_bank_branch"
+                    android:layout_centerVertical="true"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_action_expand"
+                    android:visibility="visible"/>-->
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edit_bg">
+
+                <net.skjr.wtq.ui.widgets.ClearableEditText
+                    android:id="@+id/card_add_phone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="32dp"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint="请输入预留的手机号"
+                    android:inputType="number"
+                    android:paddingLeft="8dp"
+                    android:singleLine="true"
+                    android:text="@={model.mobileno}"
+                    android:textSize="16sp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/edit_bg">
+
+                    <EditText
+                        android:id="@+id/card_add_captcha1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:inputType="number"
+                        android:hint="请输入验证码"
+                        android:paddingLeft="8dp"
+                        android:singleLine="true"
+                        android:text="@={model.verifyCode}"
+                        android:textSize="16sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/login_bar32"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_weight="3"
+                    android:background="@drawable/sms_code_shape">
+
+                    <TextView
+                        android:onClick="onAddCardGetCaptchaClick"
+                        android:id="@+id/captcha"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentEnd="false"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="false"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:hint="获取短信验证码"
+                        android:textColorHint="@color/whole_style_color"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textSize="14sp"
+                        />
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:onClick="onAddCardClick"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/whole_style_color"
+                android:shadowColor="@color/app_background"
+                android:text="提交"
+                android:textColor="@color/mine_white"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+    </layout>

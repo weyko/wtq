@@ -1,0 +1,92 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:windowBackground">@color/app_background</item>
+    </style>
+
+    <style name="AppFullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:windowBackground">@android:color/white</item>-->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/noAnimation</item>
+    </style>
+
+    <style name="AppSplashTheme" parent="AppFullScreenTheme">
+        <item name="android:windowBackground">@drawable/splash</item>
+        <!--<item name="android:windowBackground">@android:color/white</item>-->
+    </style>
+
+    <style name="noAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@null</item>
+        <item name="android:activityOpenExitAnimation">@null</item>
+        <item name="android:activityCloseEnterAnimation">@null</item>
+        <item name="android:activityCloseExitAnimation">@null</item>
+        <item name="android:taskOpenEnterAnimation">@null</item>
+        <item name="android:taskOpenExitAnimation">@null</item>
+        <item name="android:taskCloseEnterAnimation">@null</item>
+        <item name="android:taskCloseExitAnimation">@null</item>
+        <item name="android:taskToFrontEnterAnimation">@null</item>
+        <item name="android:taskToFrontExitAnimation">@null</item>
+        <item name="android:taskToBackEnterAnimation">@null</item>
+        <item name="android:taskToBackExitAnimation">@null</item>
+    </style>
+
+    <style name="tabbar_homepage">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/tab_text_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--首页4个标签入口style-->
+    <style name="invest_text_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawablePadding">4dp</item>
+        <item name="android:width">0dp</item>
+        <item name="android:textSize">@dimen/project_title_font</item>
+        <item name="android:textColor">#D2AE48</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+
+        <style name="Theme.PageIndicatorDefaults" parent="android:Theme">
+            <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator</item>
+        </style>
+
+        <style name="Widget">
+        </style>
+
+        <style name="Widget.TabPageIndicator" parent="Widget">
+            <item name="android:gravity">center</item>
+            <item name="android:background">@drawable/vpi__tab_indicator</item>
+            <item name="android:paddingLeft">22dip</item>
+            <item name="android:paddingRight">22dip</item>
+            <item name="android:paddingTop">12dp</item>
+            <item name="android:paddingBottom">12dp</item>
+            <item name="android:textAppearance">@style/TextAppearance.TabPageIndicator</item>
+            <item name="android:textSize">14sp</item>
+            <item name="android:maxLines">2</item>
+        </style>
+
+        <style name="TextAppearance.TabPageIndicator" parent="Widget">
+            <item name="android:textStyle">bold</item>
+            <item name="android:textColor">@color/actionbar_font_color</item>
+        </style>
+
+        <style name="Widget.IconPageIndicator" parent="Widget">
+            <item name="android:layout_marginLeft">6dp</item>
+            <item name="android:layout_marginRight">6dp</item>
+        </style>
+
+
+</resources>

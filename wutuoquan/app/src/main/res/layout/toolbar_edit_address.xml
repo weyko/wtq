@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolbar_height"
+    android:background="@color/actionbar_color">
+
+    <ImageView
+        android:id="@+id/toolbarBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left|center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:src="@drawable/cfb_fh"
+        />
+
+    <TextView
+        android:id="@+id/toolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="编辑地址"
+        android:textColor="@color/actionbar_font_color"
+        android:textSize="20sp"/>
+    <TextView
+        android:id="@+id/toolbar_del_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/actionbar_font_color"
+        android:textSize="14sp"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="10dp"
+        android:drawableLeft="@drawable/wu"
+        android:drawablePadding="5dp"
+        android:text="删除"/>
+
+</FrameLayout>

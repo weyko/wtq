@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="120dp"
+              android:layout_height="35dp">
+    <ImageView
+        android:id="@+id/view_minus"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/view_addminus_shape"
+        android:scaleType="center"
+        android:src="@drawable/qrdd_jian"/>
+    <EditText
+        android:id="@+id/view_edit"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:cursorVisible="false"
+        android:layout_toRightOf="@id/view_minus"
+        android:background="@drawable/view_addminus_shape"
+        android:gravity="center"
+        android:textColor="@color/actionbar_font_color"
+        android:inputType="number"
+        android:text="1"/>
+    <ImageView
+        android:id="@+id/view_add"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:scaleType="center"
+        android:layout_toRightOf="@id/view_edit"
+        android:background="@drawable/view_addminus_shape"
+        android:src="@drawable/qrdd_jia"/>
+
+
+</RelativeLayout>

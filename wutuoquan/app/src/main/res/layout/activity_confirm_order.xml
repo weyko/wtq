@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/mine_white">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actionbar_font_color"
+                    android:textSize="@dimen/publish_font_size"
+                    android:text="合计 :"/>
+                <TextView
+                    android:id="@+id/buy_total_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/money_count"
+                    android:textSize="@dimen/publish_font_size"
+                    android:text="￥500.00"/>
+                <TextView
+                    android:onClick="pay"
+                    android:clickable="true"
+                    android:layout_width="150dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:background="@color/whole_style_color"
+                    android:textColor="@color/mine_white"
+                    android:textSize="@dimen/project_title"
+                    android:gravity="center"
+                    android:text="支付"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/pay">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/divider_color">
+            <!--内容-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/divider_color"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:background="@color/mine_white"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/buy_img"
+                    android:layout_width="125dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:padding="8dp"
+                    android:src="@drawable/chouzi_blank"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="8dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/buy_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/actionbar_font_color"
+                        android:textSize="@dimen/project_title_font"
+                        android:text="项目标题"/>
+                    <TextView
+                        android:id="@+id/buy_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/detail_font_lightcolor"
+                        android:textSize="@dimen/publish_font_size"
+                        android:text="项目描述"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:background="@color/mine_white"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/detail_font_lightcolor"
+                        android:textSize="@dimen/publish_font_size"
+                        android:text="认购份数 :"/>
+
+                    <net.skjr.wtq.ui.widgets.AddMinusView
+                        android:id="@+id/buy_add_minus"
+                        android:layout_width="120dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+                <!--认购金额-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/detail_font_lightcolor"
+                        android:textSize="@dimen/publish_font_size"
+                        android:text="认购金额 :"/>
+                    <TextView
+                        android:id="@+id/buy_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/actionbar_font_color"
+                        android:textSize="15sp"
+                        android:text="50,000.00元"/>
+
+                </LinearLayout>
+                <!--股权占比-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/detail_font_lightcolor"
+                        android:textSize="@dimen/publish_font_size"
+                        android:text="股权占比 :"/>
+                    <TextView
+                        android:id="@+id/buy_rate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/actionbar_font_color"
+                        android:textSize="15sp"
+                        android:text="1.5%"/>
+
+                </LinearLayout>
+
+                <!--所需保证金-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/detail_font_lightcolor"
+                        android:textSize="@dimen/publish_font_size"
+                        android:text="所需保证金 :"/>
+                    <TextView
+                        android:id="@+id/buy_promiss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/actionbar_font_color"
+                        android:textSize="15sp"
+                        android:text="50,000.00元*1%="/>
+                    <TextView
+                        android:id="@+id/buy_promiss_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/money_count"
+                        android:textSize="15sp"
+                        android:text="500元"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/divider_color"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/divider_color"/>
+            <!--申请成为领投人-->
+            <CheckBox
+                android:id="@+id/buy_apply_lead"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/mine_white"
+                android:paddingLeft="15dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox_selector"
+                android:drawablePadding="10dp"
+                android:textColor="@color/actionbar_font_color"
+                android:text="申请成为领投人"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/divider_color"
+                android:layout_marginLeft="15dp"
+                android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/buy_read_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox_selector"
+                android:drawablePadding="10dp"
+                android:textColor="@color/actionbar_font_color"
+                android:text="阅读并同意"/>
+
+                <TextView
+                    android:onClick="onServiceClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whole_style_color"
+                    android:text="《股权众筹服务协议》"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/actionbar_font_color"
+                    android:text="和"/>
+                <TextView
+                    android:onClick="onRiskClick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/whole_style_color"
+                    android:text="《风险说明》"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/mine_white"
+                android:paddingLeft="10dp"
+                android:orientation="vertical">
+                <!--微信支付-->
+                <CheckBox
+                    android:id="@+id/buy_pay_type1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@null"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@drawable/checkbox_selector"
+                    android:drawablePadding="10dp"
+                    android:text="微信支付"/>
+                <!--连连支付-->
+                <CheckBox
+                    android:id="@+id/buy_pay_type2"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:button="@null"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:drawableRight="@drawable/checkbox_selector"
+                    android:drawablePadding="10dp"
+                    android:text="连连支付"/>
+
+                <!--余额支付-->
+                <RelativeLayout
+                    android:id="@+id/pay_type3_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp">
+                    <TextView
+                        android:id="@+id/keyong"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/actionbar_font_color"
+                        android:textSize="@dimen/publish_font_size"
+                        android:text="可用余额"/>
+
+                    <TextView
+                        android:id="@+id/buy_aval_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/keyong"
+                        android:layout_marginLeft="20dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/money_count"
+                        android:text="8,000.00元"/>
+                    <CheckBox
+                        android:id="@+id/buy_pay_type3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dp"
+                        android:drawableLeft="@drawable/checkbox_selector"
+                        android:drawablePadding="10dp"/>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/divider_color"/>
+
+            <!--内容-->
+        </LinearLayout>
+    </ScrollView>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

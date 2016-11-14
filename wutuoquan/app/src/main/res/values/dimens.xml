@@ -1,0 +1,64 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--Toolbar Height-->
+    <dimen name="toolbar_height">45dp</dimen>
+    <dimen name="toolbar_padding">16dp</dimen>
+
+    <!--底部标签页的顶部分割线尺寸-->
+    <dimen name="tabbar_topline_size">0.5dip</dimen>
+
+    <!--选项列表条目的默认高度，如更多标签页-->
+    <dimen name="list_item_height">42dp</dimen>
+    <dimen name="list_item_image_size">20dp</dimen>
+    <dimen name="list_item_image_left_margin">16dp</dimen>
+    <dimen name="list_item_title_left_margin1">16dp</dimen>
+    <dimen name="list_item_title_left_margin2">44dp</dimen>
+    <dimen name="list_item_font_size">16sp</dimen>
+    <dimen name="list_item_right_title_margin">42dp</dimen>
+
+
+    <!-- 输入框的容器的高度,如登录用户名 -->
+    <dimen name="edit_bar_height">46dp</dimen>
+    <dimen name="edit_bar_left_icon_size">22dp</dimen>
+    <dimen name="edit_bar_left_icon_left_margin">10dp</dimen>
+    <dimen name="edit_bar_text_size">16sp</dimen>
+
+    <!--发布项目字体大小-->
+    <dimen name="publish_font_size">14sp</dimen>
+    <!--发布项目输入框高度-->
+    <dimen name="publish_edit_height">45dp</dimen>
+    <!--项目item字体大小-->
+    <dimen name="project_title_font">16sp</dimen>
+    <!--次级标题字体-->
+    <dimen name="project_title_font1">14sp</dimen>
+    <!--项目统计条目高度-->
+    <dimen name="project_count">70dp</dimen>
+
+    <!--项目详情页-->
+    <dimen name="project_title">17sp</dimen>
+    <dimen name="project_state">13sp</dimen>
+    <!--详情页常规字体大小-->
+    <dimen name="detail_font">14sp</dimen>
+    <!--详情页下方条目间距-->
+    <dimen name="detail_item_margin">50dp</dimen>
+
+    <!--全局按钮字体大小-->
+    <dimen name="whole_btn_font">18sp</dimen>
+
+    <!--设置条目高度-->
+    <dimen name="setting_item_height">55dp</dimen>
+
+    <!--我的资产-->
+    <dimen name="myasset_font">28sp</dimen>
+    <!--可用资金字体-->
+    <dimen name="aval_font">20sp</dimen>
+
+    <!--登录注册页面，背景图与输入框间距-->
+    <dimen name="login_input_margin">40dp</dimen>
+    <!--确认订单页面 支付方式字体-->
+    <dimen name="pay_type_size">15sp</dimen>
+
+</resources>

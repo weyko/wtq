@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+<LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="130dp"
+              android:orientation="horizontal">
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center_vertical">
+
+        <net.skjr.wtq.ui.widgets.RadiusImageView
+            android:id="@+id/my_invest_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/chouzi_blank"/>
+
+        <net.skjr.wtq.ui.widgets.RadiusImageView
+            android:id="@+id/my_invest_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:layout_gravity="bottom"
+            android:src="@drawable/wtzd_czz"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_alignParentRight="true"
+        android:paddingTop="18dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/my_invest_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:textSize="@dimen/project_title_font"
+                android:textColor="@color/actionbar_font_color"
+                android:text="心悦餐厅"/>
+            <TextView
+                android:id="@+id/my_invest_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/whole_style_color"
+                android:textSize="@dimen/project_title_font"
+                android:text="预约成功"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/detail_font_lightcolor"
+                android:textSize="@dimen/detail_font"
+                android:text="认购份数 :"/>
+            <TextView
+                android:id="@+id/my_invest_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/detail_font_lightcolor"
+                android:textSize="@dimen/detail_font"
+                android:layout_marginLeft="4dp"
+                android:text="50份"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/detail_font_lightcolor"
+                android:textSize="@dimen/detail_font"
+                android:text="股权占比 :"/>
+            <TextView
+                android:id="@+id/my_invest_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/detail_font_lightcolor"
+                android:textSize="@dimen/detail_font"
+                android:layout_marginLeft="4dp"
+                android:text="1.5%"/>
+                </LinearLayout>
+        </LinearLayout>
+
+        <!--认购金额-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/detail_font_lightcolor"
+                android:textSize="@dimen/detail_font"
+                android:text="认购金额 :"/>
+            <TextView
+                android:id="@+id/my_invest_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/detail_font_lightcolor"
+                android:textSize="@dimen/detail_font"
+                android:layout_marginLeft="4dp"
+                android:text="500万元"/>
+            </LinearLayout>
+
+        <TextView
+            android:id="@+id/my_invest_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/detail_font_lightcolor"
+            android:textSize="@dimen/detail_font"
+            android:text="2016-05-10  10:10:00"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    </LinearLayout>

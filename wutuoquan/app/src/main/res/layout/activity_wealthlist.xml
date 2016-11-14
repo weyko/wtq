@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+        <include layout="@layout/toolbar_project_detail"/>
+
+<ScrollView
+            android:id="@+id/list_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+<LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <include layout="@layout/wealthlist_top1"/>
+    <!--分割线-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color_dark"/>
+
+    <RadioGroup
+        android:id="@+id/wealth_list_rg"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/wealth_list_rb1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/wealthlist_bg_selector"
+            android:textColor="@color/wealthlist_text_selector"
+            android:button="@null"
+            android:text="投资排行"/>
+        <RadioButton
+            android:id="@+id/wealth_list_rb2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/wealthlist_bg_selector"
+            android:textColor="@color/wealthlist_text_selector"
+            android:button="@null"
+            android:text="收益排行"/>
+    </RadioGroup>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color_dark"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <net.skjr.wtq.ui.widgets.MyListView
+        android:id="@+id/invest_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <net.skjr.wtq.ui.widgets.MyListView
+        android:id="@+id/income_order"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    </FrameLayout>
+
+
+</LinearLayout>
+</ScrollView>
+</LinearLayout>

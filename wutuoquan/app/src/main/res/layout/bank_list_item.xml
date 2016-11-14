@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@color/mine_white"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/card_logo"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pf"/>
+            <TextView
+                android:id="@+id/card_bank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/actionbar_font_color"
+                android:textSize="@dimen/project_title"
+                android:text="浦发银行"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/card_ungetcash"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/bank_set_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/status_fenhong"
+                android:padding="5dp"
+                android:textSize="15sp"
+                android:text="设为提现卡"/>
+            <TextView
+                android:id="@+id/bank_del"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:padding="5dp"
+                android:textColor="@color/status_fenhong"
+                android:textSize="15sp"
+                android:text="删除"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/card_getcash"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textColor="@color/detail_font_lightcolor"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:text="提现卡"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/card_bank_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/actionbar_font_color"
+        android:textSize="20sp"
+        android:text="**************2231"/>
+
+</LinearLayout>

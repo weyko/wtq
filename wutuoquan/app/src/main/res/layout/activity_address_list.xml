@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/divider_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/add_address"
+            android:onClick="onAddAddressClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/wealth_list_shape2"
+            android:shadowColor="@color/app_background"
+            android:text="新增地址"
+            android:textColor="@color/mine_white"
+            android:textSize="18sp"/>
+
+        <ListView
+            android:id="@+id/address_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/add_address"
+            android:divider="@color/divider_color"
+            android:dividerHeight="10dp"/>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <variable
+            name="model"
+            type="net.skjr.wtq.viewmodel.PublishProject2ViewModel"/>
+    </data>
+<LinearLayout
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/divider_color">
+
+    <include layout="@layout/toolbar"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:paddingTop="10dp"
+        android:background="@color/mine_white"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/publish_font_size"
+            android:textColor="@color/actionbar_font_color"
+            android:drawableLeft="@drawable/fbzcxm_icon_lianxr"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="联 系 人  : "/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/publish_edit_height"
+            android:layout_marginRight="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/publish_font_size"
+            android:text="@={model.linkman}"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/mine_white"
+        android:paddingBottom="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/publish_font_size"
+            android:textColor="@color/actionbar_font_color"
+            android:drawableLeft="@drawable/fbzcxm_icon_lianxfs"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:text="联系方式 :"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="@dimen/publish_edit_height"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/edit_bg"
+            android:paddingLeft="10dp"
+            android:textSize="@dimen/publish_font_size"
+            android:inputType="number"
+            android:text="@={model.phone}"/>
+    </LinearLayout>
+
+
+    <Button
+        android:onClick="submitProject"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/whole_style_color"
+        android:shadowColor="@color/app_background"
+        android:text="提交"
+        android:textColor="@color/mine_white"
+        android:textSize="18sp"/>
+
+</LinearLayout>
+
+    </layout>

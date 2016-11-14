@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <include layout="@layout/toolbar_shop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/dpsy_bj">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/shop_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <LinearLayout
+                    android:id="@+id/shop_dot"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal" />
+            </RelativeLayout>
+
+            <!--推荐店铺-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/divider_color">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="@dimen/project_title_font"
+                    android:textColor="@color/actionbar_font_color"
+                    android:text="推荐店铺"/>
+                <TextView
+                    android:id="@+id/shop_recommend_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/detail_font_lightcolor"
+                    android:textSize="@dimen/project_title_font1"
+                    android:drawableRight="@drawable/mine_toview"
+                    android:drawablePadding="5dp"
+                    android:text="全部"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/mine_white">
+            <net.skjr.wtq.shop.view.HorizontalListView
+                android:id="@+id/shop_recommend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"/>
+
+            </RelativeLayout>
+
+            <!--附近店铺-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/divider_color">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:textSize="@dimen/project_title_font"
+                    android:textColor="@color/actionbar_font_color"
+                    android:text="附近店铺"/>
+                <TextView
+                    android:id="@+id/shop_near_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/detail_font_lightcolor"
+                    android:textSize="@dimen/project_title_font1"
+                    android:drawableRight="@drawable/mine_toview"
+                    android:drawablePadding="5dp"
+                    android:text="全部"/>
+            </RelativeLayout>
+
+            <net.skjr.wtq.ui.widgets.MyListView
+                android:id="@+id/shop_near"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:background="@color/mine_white"
+                android:divider="@color/divider_color1"
+                android:dividerHeight="1dp"/>
+        </LinearLayout>
+    </ScrollView>
+        <ProgressBar
+            android:id="@+id/shop_progress"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"/>
+</RelativeLayout>
+
+</LinearLayout>

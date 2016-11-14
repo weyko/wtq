@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar_reply"/>
+
+    <TextView
+        android:id="@+id/reply_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/actionbar_font_color"
+        android:text="\@番茄"/>
+
+    <EditText
+        android:id="@+id/reply_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:enabled="true"
+        android:inputType="textMultiLine"
+        android:minLines="8"
+        android:maxLines="20"
+        android:scrollbars="vertical"
+        android:textSize="@dimen/publish_font_size"
+        android:padding="8dp"
+        android:gravity="top"
+        android:hint="谈谈您对这条评论的看法"
+        android:text=""/>
+
+</LinearLayout>

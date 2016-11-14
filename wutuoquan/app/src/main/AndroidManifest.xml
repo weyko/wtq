@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="net.skjr.wtq"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 正常权限 -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <!--用于申请调用A-GPS模块-->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+
+    <!-- 危险权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="net.skjr.wtq.application.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="cc276d8a738e0a47c8096912bb733654"/>
+
+        <service android:name="com.amap.api.location.APSService"></service>
+
+        <receiver android:name="net.skjr.wtq.application.UpdateReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name="net.skjr.wtq.ui.activity.system.SplashActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- **********************友盟 begin********************** -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5754d31ce0f55a88db000f97"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="hlg"/>
+        <!-- **********************友盟 end********************** -->
+        <activity android:name=".invest.activity.BaseActivity"
+                  android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.activity.system.MainActivity"/>
+        <activity android:name=".invest.activity.ProjectLocationActivity"/>
+        <activity android:name=".invest.activity.WealthListActivity"/>
+        <activity android:name=".invest.activity.ProjectListActivity"/>
+        <activity android:name=".invest.activity.ProjectDetailsActivity"/>
+        <activity android:name=".mine.activity.LoginActivity"/>
+        <activity android:name=".invest.activity.EnterBrandsActivity"/>
+        <activity android:name=".invest.activity.ApplyEnterActivity"
+                  android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".invest.activity.MyInvestActivity"/>
+        <activity android:name=".invest.activity.MyCollectedActivity"/>
+        <activity android:name=".invest.activity.MyPublishedActivity"/>
+        <activity android:name=".mine.activity.Regist1Activity"/>
+        <activity android:name=".mine.activity.Regist2Activity"/>
+        <activity android:name=".invest.activity.PublishPreActivity"/>
+        <activity android:name=".invest.activity.PublishProject1Activity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity android:name=".invest.activity.ConfirmOrderActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"/>
+        <activity android:name=".invest.activity.PublishProject2Activity"/>
+        <activity android:name=".invest.activity.PublishProjectSuccessActivity"/>
+        <activity android:name=".invest.activity.ForgetPwd1Activity"/>
+        <activity android:name=".invest.activity.ForgetPwd2Activity"/>
+        <activity android:name=".mine.activity.SuccessActivity"/>、
+        <activity android:name=".invest.activity.MyAssetsActivity"/>
+        <activity android:name=".invest.activity.RealNameAuthActivity"/>
+        <activity android:name=".invest.activity.LoginPwdActivity"
+                  android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".mine.activity.SettingActivity"/>
+        <activity android:name=".invest.activity.SetTradePwdActivity"/>
+        <activity android:name=".invest.activity.ApplyEnter2Activity"/>
+        <activity android:name=".invest.activity.UserInfoActivity"/>
+        <activity android:name=".invest.activity.ForgetTradePwd1Activity"/>
+        <activity android:name=".invest.activity.ForgetTradePwd2Activity"/>
+        <activity android:name=".invest.activity.BankCardListActivity"/>
+        <activity android:name=".invest.activity.AddBankCardActivity"/>
+        <activity android:name=".ui.activity.system.GuideActivity"/>
+        <activity android:name=".ui.activity.system.WebActivity"/>
+        <activity android:name=".invest.activity.InvestGeniusActivity"/>
+        <activity android:name=".invest.activity.RechargeActivity"/>
+        <activity android:name=".invest.activity.DiscussListActivity"/>
+        <activity android:name=".invest.activity.ReplyDiscussActivity"/>
+        <activity android:name=".invest.activity.DiscussActivity"/>
+        <activity android:name=".invest.activity.InvestorAuthActivity"/>
+        <activity android:name=".invest.activity.AuthInvestorSuccessActivity"/>
+        <activity android:name=".invest.activity.GetCashActivity"/>
+        <activity android:name=".invest.activity.UpdateMoodActivity"/>
+        <activity android:name=".invest.activity.UpdateInfoActivity"/>
+        <activity android:name=".mine.activity.AddressListActivity"/>
+        <activity android:name=".mine.activity.AddAddressActivity"/>
+        <activity android:name=".mine.activity.FeedBackActivity"/>
+        <activity android:name=".mine.activity.MineCommissionActivity"/>
+        <activity android:name=".mine.activity.ExclusiveOfferActivity"/>
+        <activity android:name=".mine.activity.CouponActivity"/>
+        <activity android:name=".mine.activity.MemberShipActivity"/>
+        <activity android:name=".shop.activity.HotelOrderActivity"/>
+        <activity android:name=".shop.activity.SearchShopActivity"/>
+        <activity android:name=".shop.activity.ShopListActivity"/>
+        <activity android:name="net.skjr.wtq.ui.activity.system.LoginActivity"/>
+    </application>
+
+</manifest>

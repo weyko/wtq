@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+
+        <variable
+            name="model"
+            type="net.skjr.wtq.viewmodel.SaveApply2ViewModel"/>
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/toolbar"/>
+
+        <!--联系人-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@color/divider_color">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/user"
+                />
+
+            <net.skjr.wtq.ui.widgets.ClearableEditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="32dp"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="请输入联系人"
+                android:paddingLeft="8dp"
+                android:singleLine="true"
+                android:text="@={model.user}"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+        <!--联系方式-->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="46dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:background="@color/divider_color">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/zhuc_sj"
+                />
+
+            <net.skjr.wtq.ui.widgets.ClearableEditText
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="26dp"
+                android:layout_marginRight="32dp"
+                android:background="@null"
+                android:ellipsize="end"
+                android:hint="请输入联系方式"
+                android:inputType="number"
+                android:paddingLeft="8dp"
+                android:singleLine="true"
+                android:text="@={model.phone}"
+                android:textSize="16sp"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/enter_read_protocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableLeft="@drawable/checkbox_selector"
+                android:drawablePadding="10dp"
+                android:text="阅读并同意"/>
+            <TextView
+                android:onClick="onEnterProtolClick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/whole_style_color"
+                android:text="《乌托圈商家入驻服务协议》"/>
+
+        </LinearLayout>
+
+        <Button
+            android:onClick="saveApply"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/whole_style_color"
+            android:shadowColor="@color/app_background"
+            android:text="提交"
+            android:textColor="@color/mine_white"
+            android:textSize="18sp"
+            android:id="@+id/button"/>
+
+
+    </LinearLayout>
+
+    </layout>

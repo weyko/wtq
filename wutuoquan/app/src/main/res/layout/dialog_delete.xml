@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="vertical"
+              android:paddingBottom="12dp"
+              android:paddingTop="24dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal"
+        android:text="删除银行卡"
+        android:textColor="@color/mine_red1"
+        android:textSize="16sp"/>
+
+    <!--<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="46dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_weight="2">
+
+        <EditText
+            android:id="@+id/pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="请输入交易密码"
+            android:inputType="textPassword"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:text=""
+            android:textSize="16sp"/>
+
+    </RelativeLayout>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/actionbar_font_color"
+        android:textSize="18sp"
+        android:layout_marginLeft="20dp"
+        android:text="确认删除？"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/whole_style_color"
+            android:shadowColor="@color/app_background"
+            android:text="取消"
+            android:textColor="@color/mine_white"
+            android:textSize="18sp"
+            />
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/whole_style_color"
+            android:shadowColor="@color/app_background"
+            android:text="确认"
+            android:textColor="@color/mine_white"
+            android:textSize="18sp"
+            />
+
+
+    </LinearLayout>
+</LinearLayout>

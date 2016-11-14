@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">乌托圈</string>
+    <string name="default_text">默认文本</string>
+
+    <string name="blank_fragment">尚未开发</string>
+
+    <string name="login_digits">._0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLIMNOPQRSTUVWXYZ</string>
+    <string name="warnniing1">阅读并同意《乌托圈股权众筹服务协议》</string>
+    <string name="warnniing2">阅读并同意《风险提示》</string>
+    <string name="head_invest_introduce">红杉资本是一个专业的投资机构，首次领携投资凯嘉酒店，看中的不仅是凯嘉优秀的项目
+    ，更看中凯嘉超前的经营模式。</string>
+
+    <string name="publish_project">乌托圈是一家可以帮助您实现梦想的网站，在这里，您可以发布您的梦想计划和公益活动，并通过网络平台面对公众集资，让有创造力和有需要的人可能获得他们所需要的资金，以便使他们的梦想都有可能实现。</string>
+
+    <string name="investor_warnning">阅读并同意《乌托圈股权众筹服务协议》和《风险提示》</string>
+    <string name="investor_remind">为了保护您的合法权益，根据法律规定需实名认证</string>
+    <string name="auth_investor_success">请耐心等待，认证成功后将以短信的方式通知您</string>
+</resources>

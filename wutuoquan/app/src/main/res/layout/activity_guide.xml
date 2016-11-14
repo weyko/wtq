@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/guide_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+
+    <Button
+        android:id="@+id/skip"
+        android:layout_width="54dp"
+        android:layout_height="28dp"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/whole_style_color"
+        android:onClick="onSkipClick"
+        android:textColor="@color/mine_white"
+        android:text="跳过"/>
+
+
+</FrameLayout>

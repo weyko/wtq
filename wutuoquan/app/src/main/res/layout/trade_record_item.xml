@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_marginBottom="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/record_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/actionbar_font_color"
+            android:textSize="@dimen/project_title"
+            android:text="邀请好友消费分红"/>
+
+        <TextView
+            android:id="@+id/record_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/project_title"
+            android:textColor="@color/money_count"
+            android:layout_alignParentRight="true"
+            android:text="+10.00元"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/record_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/detail_font_lightcolor"
+        android:textSize="@dimen/project_title_font1"
+        android:text="2016-10-20 10:10:10"/>
+
+</LinearLayout>

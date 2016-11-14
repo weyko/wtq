@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="#F5F5F5">
+
+
+        <EditText
+            android:id="@+id/mood"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="10dp"
+            android:enabled="true"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:minLines="8"
+            android:maxLines="20"
+            android:scrollbars="vertical"
+            android:ellipsize="end"
+            android:hint="请编辑签名"
+            android:textColorHint="@color/detail_font_lightcolor"
+            android:paddingLeft="8dp"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:onClick="onSubmitMoodClick"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/wealth_list_shape2"
+        android:shadowColor="@color/app_background"
+        android:text="保存"
+        android:textColor="@color/mine_white"
+        android:textSize="18sp"/>
+
+</LinearLayout>

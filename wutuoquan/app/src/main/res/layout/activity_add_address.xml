@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="model"
+            type="net.skjr.wtq.viewmodel.AddAddressViewModel"/>
+    </data>
+<LinearLayout
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <include layout="@layout/toolbar_edit_address"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/divider_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/divider_color">
+
+        <Button
+            android:onClick="onSaveAddressClick"
+            android:id="@+id/save_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/wealth_list_shape2"
+            android:shadowColor="@color/app_background"
+            android:text="保存并使用"
+            android:textColor="@color/mine_white"
+            android:textSize="18sp"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/mine_white"
+            android:layout_above="@id/save_address">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <!--收件人-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/publish_font_size"
+                    android:textColor="@color/actionbar_font_color"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="收件人 :"/>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/publish_edit_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg"
+                    android:hint="请输入收件人姓名"
+                    android:textColorHint="@color/detail_font_lightcolor"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:textSize="@dimen/publish_font_size"
+                    android:text="@={model.name}"/>
+            </LinearLayout>
+            <!--手机-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/publish_font_size"
+                    android:textColor="@color/actionbar_font_color"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="手    机 :"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/publish_edit_height"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg"
+                    android:hint="请输入收件人手机号码"
+                    android:textColorHint="@color/detail_font_lightcolor"
+                    android:paddingLeft="10dp"
+                    android:singleLine="true"
+                    android:inputType="number"
+                    android:textSize="@dimen/publish_font_size"
+                    android:text="@={model.phone}"
+                    android:id="@+id/editText"/>
+            </LinearLayout>
+
+            <!--省份-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/publish_font_size"
+                    android:textColor="@color/actionbar_font_color"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="省    份 :"/>
+                <RelativeLayout
+                    android:onClick="onSelectProvinceClick"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/publish_edit_height"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg">
+
+                    <TextView
+                        android:id="@+id/province"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="32dp"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请选择"
+                        android:textColorHint="@color/detail_font_lightcolor"
+                        android:singleLine="true"
+                        android:text="@={model.province}"
+                        android:textSize="@dimen/publish_font_size"/>
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@+id/province"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_action_expand"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                </LinearLayout>
+            <!--城市-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/publish_font_size"
+                    android:textColor="@color/actionbar_font_color"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="城    市 :"/>
+                <RelativeLayout
+                    android:onClick="onSelectCityClick"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/publish_edit_height"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg">
+
+                    <TextView
+                        android:id="@+id/city"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="32dp"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请选择"
+                        android:textColorHint="@color/detail_font_lightcolor"
+                        android:singleLine="true"
+                        android:text="@={model.city}"
+                        android:textSize="@dimen/publish_font_size"/>
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@+id/city"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_action_expand"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                </LinearLayout>
+            <!--区 县-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/publish_font_size"
+                    android:textColor="@color/actionbar_font_color"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:text="区    县 :"/>
+                <RelativeLayout
+                    android:onClick="onSelectCountyClick"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/publish_edit_height"
+                    android:layout_marginLeft="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edit_bg">
+
+                    <TextView
+                        android:id="@+id/county"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="32dp"
+                        android:background="@null"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:hint="请选择"
+                        android:textColorHint="@color/detail_font_lightcolor"
+                        android:singleLine="true"
+                        android:text="@={model.county}"
+                        android:textSize="@dimen/publish_font_size"/>
+
+                    <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignRight="@+id/county"
+                        android:layout_centerVertical="true"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_action_expand"
+                        android:visibility="visible"/>
+                </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--地址-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/publish_font_size"
+                        android:textColor="@color/actionbar_font_color"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="地    址 :"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/publish_edit_height"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_bg"
+                        android:hint="请输入收件人详细地址"
+                        android:textColorHint="@color/detail_font_lightcolor"
+                        android:paddingLeft="10dp"
+                        android:singleLine="true"
+                        android:textSize="@dimen/publish_font_size"
+                        android:text="@={model.address}"/>
+                </LinearLayout>
+
+                <!--邮编-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/publish_font_size"
+                        android:textColor="@color/actionbar_font_color"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:text="邮    编 :"/>
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/publish_edit_height"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_bg"
+                        android:hint="请输入邮政编码"
+                        android:textColorHint="@color/detail_font_lightcolor"
+                        android:paddingLeft="10dp"
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:textSize="@dimen/publish_font_size"
+                        android:text="@={model.num}"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/divider_color"/>
+
+                <RelativeLayout
+                    android:onClick="onSelectDefaultClick"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/mine_white"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textSize="@dimen/publish_font_size"
+                        android:textColor="@color/actionbar_font_color"
+                        android:text="设为默认地址"/>
+
+                    <CheckBox
+                        android:checked="@={model.deault}"
+                        android:id="@+id/default_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/default_address_selector"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+    </layout>
