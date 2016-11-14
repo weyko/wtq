@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RecordProgressBar" >
+        <attr name="rpb_backgroundColor" format="color" />
+        <attr name="rpb_runningColor" format="color" />
+        <attr name="rpb_cancelColor" format="color" />
+        <attr name="rpb_timeLength" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="CameraPreviewView" >
+        <attr name="cpv_focusDrawable" format="reference" />
+        <attr name="cpv_indicatorDrawable" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="scaleStyle" >
+        <attr name="scalableType" format="string" />
+    </declare-styleable>
+    <declare-styleable name="IPullable">
+        <attr name="PullMode">
+            <!-- pull down -->
+            <flag name="top" value="1" />
+            <!-- pull up -->
+            <flag name="bottom" value="-1" />
+            <!-- both -->
+            <flag name="both" value="0" />
+            <!-- none -->
+            <flag name="none" value="2" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="SettingItemView">
+        <attr name="title" format="string" />
+        <attr name="hint" format="string" />
+        <attr name="empty" format="boolean" />
+        <attr name="on_off" format="boolean" />
+        <attr name="drawable_left" format="reference" />
+        <attr name="drawable_right" format="reference" />
+    </declare-styleable>
+    <style name="tab_top">
+        <item name="android:textSize">@dimen/text_size_cont</item>
+        <item name="android:textColor">@color/tab_color_selector</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/tab_frame_selector_linebottom</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">12dp</item>
+    </style>
+</resources>

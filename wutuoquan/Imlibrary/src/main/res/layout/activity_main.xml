@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/contain_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/bg_color"></FrameLayout>
+
+    <ImageView style="@style/a_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tab_venture_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/tab_chuangtou"
+            android:gravity="center"
+            android:padding="8dp"
+            android:tag="创投"
+            android:text="创投"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_tab_11" />
+
+        <RelativeLayout
+            android:id="@+id/rl_chat_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/tab_chat_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:drawablePadding="4dp"
+                android:drawableTop="@drawable/tab_bubbles_sel"
+                android:padding="8dp"
+                android:tag="@string/tab_chat_title"
+                android:text="@string/tab_chat_title"
+                android:textColor="@color/color_tab_selected"
+                android:textSize="@dimen/text_tab_11" />
+
+            <TextView
+                android:id="@+id/chatting_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tab_chat_main"
+                android:background="@drawable/ic_message_nums"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="0"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tab_shop_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/tab_shangcheng"
+            android:gravity="center"
+            android:padding="8dp"
+            android:tag="商城"
+            android:text="商城"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_tab_11" />
+
+        <TextView
+            android:id="@+id/tab_me_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawablePadding="4dp"
+            android:drawableTop="@drawable/tab_user"
+            android:gravity="center"
+            android:padding="8dp"
+            android:tag="我"
+            android:text="我"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_tab_11" />
+    </LinearLayout>
+</LinearLayout>

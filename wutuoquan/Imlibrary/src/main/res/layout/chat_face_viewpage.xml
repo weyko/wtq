@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 表情布局 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_emotion"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/emotion_height"
+    android:background="@color/white"
+    android:visibility="visible" >
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <RadioGroup
+        android:id="@+id/face_btn_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/default_face"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/face_chang_bg"
+            android:button="@null"
+            android:checked="true"
+            android:drawableBottom="@drawable/face_button_1"
+            android:gravity="center" />
+
+        <ImageView
+            style="@style/a_line_v"
+             />
+
+        <RadioButton
+            android:id="@+id/moya_face_gif"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/face_chang_bg"
+            android:button="@null"
+            android:drawableBottom="@drawable/face_button_2"
+            android:gravity="center" />
+
+        <ImageView
+            style="@style/a_line_v"
+             />
+
+        <RadioButton
+            android:id="@+id/stickerb_gif"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/face_chang_bg"
+            android:button="@null"
+            android:drawableBottom="@drawable/face_button_3"
+            android:gravity="center" />
+
+        <ImageView
+            style="@style/a_line_v"
+             />
+
+        <RadioButton
+            android:id="@+id/face_other"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/face_chang_bg"
+            android:button="@null"
+            android:drawableBottom="@drawable/face_button_4"
+            android:gravity="center" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/line_chat_face"
+        style="@style/a_line"
+        android:layout_above="@id/face_btn_layout"
+         />
+
+    <LinearLayout
+        android:id="@+id/chat_face_point_loy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/line_chat_face"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+    </LinearLayout>
+
+</RelativeLayout>

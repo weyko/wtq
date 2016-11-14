@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_bg_color">
+    <include
+        android:id="@+id/top_bar"
+        layout="@layout/layout_title"></include>
+    <View
+        android:id="@+id/line_top_chat"
+        style="@style/a_line"
+        android:layout_below="@id/top_bar" />
+
+    <LinearLayout
+        android:id="@+id/bar_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingBottom="2dip">
+
+        <View style="@style/a_line" />
+
+        <include
+            android:id="@+id/view_chat_bottom"
+            layout="@layout/item_chat_inputbottom" />
+
+        <LinearLayout
+            android:id="@+id/more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_color"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- 表情图片 -->
+
+            <include
+                android:id="@+id/view_face_container"
+                layout="@layout/chat_face_viewpage" />
+            <!-- 图片，表情，名片等按钮 -->
+
+            <TableLayout
+                android:id="@+id/ll_btn_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible"
+                android:weightSum="1">
+                <View style="@style/a_line" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginTop="@dimen/chat_btn_padding2"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+                    <TextView
+                        android:id="@+id/btn_picture"
+                        style="@style/menu_text"
+                        android:clickable="true"
+                        android:drawableTop="@drawable/xiangpian"
+                        android:onClick="onClick"
+                        android:text="@string/chat_menu_1" />
+
+                    <TextView
+                        android:id="@+id/btn_video"
+                        style="@style/menu_text"
+                        android:clickable="true"
+                        android:drawableTop="@drawable/video"
+                        android:onClick="onClick"
+                        android:text="@string/chat_menu_2" />
+                    <TextView
+                        android:id="@+id/btn_packet"
+                        style="@style/menu_text"
+                        android:clickable="true"
+                        android:drawableTop="@drawable/hongbao"
+                        android:onClick="onClick"
+                        android:text="@string/chat_menu_3" />
+                    <TextView
+                        android:id="@+id/btn_card"
+                        style="@style/menu_text"
+                        android:clickable="true"
+                        android:drawableTop="@drawable/kaquan"
+                        android:onClick="onClick"
+                        android:text="@string/chat_menu_4" />
+                </LinearLayout>
+            </TableLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bar_bottom"
+        android:layout_below="@+id/line_top_chat"
+        android:scrollbars="vertical">
+
+        <chat.view.pullview.PullToRefreshLayout
+            android:id="@+id/ph_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loy_attention"
+            android:background="@color/bg_color"
+            android:orientation="vertical"
+            android:fillViewport="true"
+            android:visibility="gone">
+
+            <include layout="@layout/refresh_head" />
+
+            <chat.view.pullview.PullableListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cacheColorHint="@android:color/transparent"
+                android:divider="@null"
+                android:dividerHeight="@dimen/chat_view_padding"
+                android:listSelector="@android:color/transparent"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:scrollbarStyle="outsideOverlay"
+                android:transcriptMode="normal"></chat.view.pullview.PullableListView>
+            <include layout="@layout/load_more" />
+        </chat.view.pullview.PullToRefreshLayout>
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="@dimen/chat_btn_padding2"
+            android:drawableTop="@drawable/img_tip"
+            android:gravity="center"
+            android:text="@string/chat_begin_to_talk"
+            android:textColor="@color/text_color_mark" />
+
+        <RelativeLayout
+            android:id="@+id/loy_attention"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_color"
+            android:padding="8dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_attention"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_white_to_purple"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:paddingBottom="4dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:text="@string/chat_add_follow"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/text_size_mark" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@id/tv_attention"
+                android:alpha="100"
+                android:gravity="center"
+                android:text="@string/chat_add_follow_hint"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_toast" />
+        </RelativeLayout>
+
+        <include
+            android:id="@+id/recording_container"
+            layout="@layout/item_chat_voice_animation"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/view_toast_follow_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bar_bottom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_follow_toast_first"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_hint_follow_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_cont" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/chat_hint_follow_content"
+            android:textColor="#B8A2D9"
+            android:textSize="@dimen/text_size_toast" />
+
+        <TextView
+            android:id="@+id/tv_follow_first"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/chat_follow_selector"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/chat_add_follow"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_cont" />
+    </LinearLayout>
+
+</RelativeLayout>

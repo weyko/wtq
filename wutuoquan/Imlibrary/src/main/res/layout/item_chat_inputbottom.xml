@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:baselineAligned="false"
+    android:gravity="bottom"
+    android:orientation="horizontal"
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp">
+
+    <RelativeLayout
+        android:id="@+id/lay1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <CheckBox
+            android:id="@+id/cb_inputselect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/select_input_type"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text=""
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/loy_voice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/chat_press_speak_btn"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/id_chat_speak"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minHeight="30dp"
+                android:padding="5dp"
+                android:text="@string/chat_record_to_speak"
+                android:textColor="@color/text_color_mark"
+                android:textSize="@dimen/text_size_cont" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/loy_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:onClick="onClick"
+            android:visibility="visible">
+
+            <chat.view.PasteEditText
+                android:id="@+id/et_sendmessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_selector"
+                android:gravity="left|center_vertical"
+                android:maxLength="2000"
+                android:maxLines="5"
+                android:minHeight="31dp"
+                android:onClick="onClick"
+                android:paddingBottom="3dp"
+                android:paddingLeft="3dp"
+                android:paddingRight="25dp"
+                android:paddingTop="3dp"
+                android:textColor="@color/text_color_mark"
+                android:textSize="@dimen/text_size_cont">
+
+                <requestFocus />
+            </chat.view.PasteEditText>
+
+            <ImageView
+                android:id="@+id/clear_chat"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom"
+                android:padding="8dp"
+                android:src="@drawable/btn_cancel"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/cb_emoticons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/chat_emoticon"
+            android:button="@null"
+            android:gravity="center" />
+        <!--  -->
+
+        <ImageView
+            android:id="@+id/btn_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:button="@null"
+            android:gravity="center"
+            android:onClick="more"
+            android:padding="5dp"
+            android:src="@drawable/btn_add_select" />
+
+        <TextView
+            android:id="@+id/btn_send"
+            android:layout_width="48dp"
+            android:layout_height="30dp"
+            android:background="@drawable/bg_gray_white_select"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:paddingLeft="3dp"
+            android:layout_marginRight="8dp"
+            android:paddingRight="3dp"
+            android:text="@string/chat_record_to_send"
+            android:textColor="@color/text_color_mark"
+            android:textSize="@dimen/text_size_title_btn"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/loy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:id="@+id/header_view"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_high"
+            android:background="@color/white"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/back"
+                style="@style/titleButton"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/bg_back" />
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/title_txt"
+                android:textColor="@color/text_color_title"
+                android:textSize="@dimen/text_size_top" />
+
+            <CheckBox
+                android:id="@+id/select"
+                style="@style/titleRight"
+                android:layout_height="fill_parent"
+                android:layout_marginRight="5dp"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/selsect"
+                android:textColor="@color/text_color_title"
+                android:textSize="@dimen/text_size_title_btn" />
+        </RelativeLayout>
+
+        <View
+            style="@style/a_line"
+            android:layout_below="@+id/header_view" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/loy1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp" >
+
+            <Button
+                android:id="@+id/all"
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_button_2"
+                android:onClick="onClick"
+                android:text="@string/chat_select_all_on"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/text_size_toast" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/loy3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:weightSum="4" >
+
+            <ImageView
+                android:id="@+id/btn_chat_copy"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:src="@drawable/selector_chat_copy_2" />
+
+            <ImageView
+                android:id="@+id/btn_chat_save"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:src="@drawable/selector_chat_save_2" />
+
+            <ImageView
+                android:id="@+id/btn_chat_transpondl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:src="@drawable/selector_chat_transpond_2"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/btn_chat_delete"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:src="@drawable/selector_chat_delete_2" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/loy1"
+        android:layout_below="@id/loy"
+        android:gravity="center"
+        android:horizontalSpacing="3dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth" />
+
+    <TextView
+        android:id="@+id/tv_empty_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawablePadding="8dp"
+        android:drawableTop="@drawable/img_tip"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/chat_empty_pic_hint"
+        android:textColor="@color/text_color_mark" />
+
+</RelativeLayout>

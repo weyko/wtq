@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 聊天首页底部栏颜色切换 -->
+    <item android:color="@color/color_tab_selected" android:state_checked="true"></item>
+    <item android:color="@color/color_tab_selected" android:state_pressed="true"></item>
+    <item android:color="@color/text_color_title" android:state_checked="false"></item>
+    <item android:color="@color/text_color_title" />
+
+</selector>

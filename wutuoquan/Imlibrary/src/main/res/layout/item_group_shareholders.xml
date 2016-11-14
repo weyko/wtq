@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitem_selector"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/title_item_group_shareholders"
+        style="@style/contentText"
+        android:layout_width="match_parent"
+        android:button="@null"
+        android:layout_marginLeft="3dp"
+        android:enabled="false"
+        android:drawableRight="@drawable/shrinkage_unfold_selector"
+        android:padding="10dp" />
+</LinearLayout>

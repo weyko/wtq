@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:background="#ECA15D"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/view_time_chat_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/chat_time_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:paddingTop="13dp" />
+
+        <TextView
+            android:id="@+id/pop_chat_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="40dp"
+            android:layout_toRightOf="@+id/tv_time"
+            android:text="" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/view_chat_coupon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical"
+        android:paddingBottom="8dp" >
+
+        <TextView
+            android:id="@+id/title_chat_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textSize="@dimen/text_size_cont"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/line_chat_coupon"
+            style="@style/a_line"
+            android:layout_below="@+id/title_chat_coupon"
+            android:layout_marginBottom="8dp"
+            android:clickable="false"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/icon_chat_coupon"
+            android:layout_width="56dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/line_chat_coupon"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:clickable="false"
+            />
+        <TextView
+            android:id="@+id/content_chat_coupon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/icon_chat_coupon"
+            android:layout_below="@+id/line_chat_coupon"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/icon_chat_coupon"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/date_chat_coupon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/content_chat_coupon"
+            android:layout_marginRight="8dp"
+            android:layout_toRightOf="@+id/icon_chat_coupon"
+            android:maxLines="2"
+            android:textSize="14dp" />
+    </RelativeLayout>
+
+</LinearLayout>

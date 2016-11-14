@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/cancal_group_info_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/chat_pop_selsect"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/cancel"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_title_btn" />
+
+        <TextView
+            android:id="@+id/title_group_info_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/chat_group_info_title"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_top" />
+
+        <TextView
+            android:id="@+id/save_group_info_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/chat_pop_selsect"
+            android:clickable="true"
+            android:enabled="false"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/save"
+            android:textColor="@color/text_color_no_click"
+            android:textSize="@dimen/text_size_title_btn" />
+    </LinearLayout>
+
+    <ImageView style="@style/a_line" />
+
+    <ImageView
+        style="@style/a_line"
+        android:layout_marginTop="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8dp" >
+
+        <EditText
+            android:id="@+id/edt_group_info_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:minLines="2"
+            android:textColor="@color/text_color_title"
+            android:textColorHint="@color/text_color_mark"
+            android:textSize="@dimen/text_size_cont" />
+
+        <TextView
+            android:id="@+id/count_group_info_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/edt_group_info_edit"
+            android:layout_marginRight="5dp"
+            android:text="@string/personal_count"
+            android:textColor="@color/text_color_no_click"
+            android:textSize="@dimen/text_size_toast"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView style="@style/a_line" />
+
+    <TextView
+        android:id="@+id/hint_group_info_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginRight="@dimen/editText_padding"
+        android:textColor="@color/text_color_no_click" />
+
+</LinearLayout>

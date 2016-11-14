@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="selector_gray_bg">#cccccc</color>
+    <color name="selector_top_color">#ffffff</color>
+    <color name="selector_image_checked_bg">#66000000</color>
+    <color name="selector_topbar_btn_text_color">#000000</color>
+    <color name="selector_back_color_noclick">#000000</color>
+    <color name="selector_back_color_click">#000000</color>
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setting="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/layout_title" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bg_header_person_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_homespace"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="30dp">
+
+                <ImageView
+                    android:id="@+id/iv_avater_person_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/default_head" />
+                <TextView
+                    android:id="@+id/tv_nickname_person_center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_title" />
+            </LinearLayout>
+
+            <chat.view.SettingItemView
+                android:id="@+id/sv_nickname_person_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                setting:empty="true"
+                setting:title="@string/person_center_nickname" />
+            <ImageView style="@style/a_line" />
+
+            <chat.view.SettingItemView
+                android:id="@+id/sv_sex_person_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                setting:empty="true"
+                setting:title="@string/person_center_sex" />
+            <ImageView style="@style/a_line" />
+
+            <chat.view.SettingItemView
+                android:id="@+id/sv_address_person_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                setting:empty="true"
+                setting:title="@string/person_center_address" />
+            <ImageView style="@style/a_line" />
+
+            <chat.view.SettingItemView
+                android:id="@+id/sv_sign_person_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                setting:empty="true"
+                setting:title="@string/person_center_sign" />
+            <ImageView style="@style/a_line" />
+
+            <chat.view.SettingItemView
+                android:id="@+id/sv_card_person_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                setting:title="@string/person_center_card" />
+
+            <ImageView style="@style/a_line" />
+
+            <TextView
+                android:id="@+id/tv_msg_person_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_blue_select"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:text="@string/person_center_msg"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_title" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

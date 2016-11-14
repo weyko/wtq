@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="8dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/chat_time_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:paddingTop="@dimen/chat_time_padding_top" />
+
+        <TextView
+            android:id="@+id/pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="40dp"
+            android:layout_toLeftOf="@+id/tv_time"
+            android:text="" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/chat_time_padding_bottom" >
+
+        <com.imtest.chat.view.CircleImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/chat_image_size"
+            android:layout_height="@dimen/chat_image_size"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/chat_btn_padding2"
+            android:background="@drawable/default_head" />
+
+        <TextView
+            android:id="@+id/tv_nick"
+            style="@style/chat_time_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_avatar"
+            android:gravity="center_horizontal"
+            android:maxWidth="160dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color_mark"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/loy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_nick"
+            android:layout_marginLeft="@dimen/chat_btn_padding2"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/iv_avatar"
+            android:background="@drawable/chatfrom_bg"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gif_content"
+                android:layout_width="@dimen/chat_gif_width"
+                android:layout_height="@dimen/chat_gif_width"
+                android:visibility="gone" />
+
+            <com.moxian.view.MxProgressImageView
+                android:id="@+id/iv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_content"
+                android:layout_alignLeft="@+id/iv_content"
+                android:layout_alignRight="@+id/iv_content"
+                android:padding="5dp" >
+
+                <TextView
+                    android:id="@+id/tv_head"
+                    style="@style/chat_time_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chat_group_invite_item_head"
+                    android:textColor="@color/text_color_title" />
+
+                <ImageView
+                    android:id="@+id/iv_avatar_group"
+                    android:layout_width="65dp"
+                    android:layout_height="65dp"
+                    android:layout_below="@+id/tv_head"
+                    android:layout_marginRight="5dp" />
+
+                <TextView
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_head"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@+id/iv_avatar_group"
+                    android:text="@string/chat_group_invite_item_head"
+                    android:textColor="@color/text_color_mark"
+                    android:textSize="@dimen/text_size_title_btn" />
+
+                <TextView
+                    android:id="@+id/tv_lookinfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_toRightOf="@+id/iv_avatar_group"
+                    android:text="@string/chat_group_invite_item_click"
+                    android:textColor="@color/text_color_mark"
+                    android:textSize="@dimen/text_size_title_btn" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_status"
+            android:layout_width="6dp"
+            android:layout_height="6dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/loy" />
+
+        <ProgressBar
+            android:id="@+id/pb"
+            style="@style/chat_progress"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:padding="2dp"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@id/loy"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

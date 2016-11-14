@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bg_color"
+    android:layout_height="match_parent" android:orientation="vertical">
+    <include layout="@layout/layout_title" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gudonghui" />
+    <TextView
+        style="@style/contentText"
+        android:padding="8dp"
+        android:text="@string/invate_contacts_hint"/>
+    <TextView
+        android:id="@+id/tv_weixin_invate_contacts"
+        android:clickable="true"
+        style="@style/contentText"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_gray_white_select"
+        android:text="@string/invate_contacts_weixin"/>
+    <TextView
+        android:id="@+id/tv_qq_invate_contacts"
+        android:clickable="true"
+        style="@style/contentText"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/bg_gray_white_select"
+        android:gravity="center"
+        android:text="@string/invate_contacts_qq"/>
+    <TextView
+        android:id="@+id/tv_sms_invate_contacts"
+        android:clickable="true"
+        style="@style/contentText"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:background="@drawable/bg_gray_white_select"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="@string/invate_contacts_sms"/>
+</LinearLayout>

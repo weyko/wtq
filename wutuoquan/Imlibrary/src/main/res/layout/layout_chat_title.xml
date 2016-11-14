@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/top_view_chat_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_high"
+        android:background="@drawable/top_bg"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/status_bar_height"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tab_chat_title"
+            style="@style/titleText"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:text="@string/tab_chat_title"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/tab_chat_menu"
+            android:layout_width="@dimen/title_menu_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/menu_btn_selector"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_chat_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_shareholder_chat_title"
+            style="@style/radion_btn_style"
+            android:drawableTop="@drawable/gudong"
+            android:textColor="@color/color_tab_selected"
+            android:text="@string/chat_tab_shareholders" />
+
+        <RadioButton
+            android:id="@+id/rb_contacts_chat_title"
+            style="@style/radion_btn_style"
+            android:drawableTop="@drawable/contacts"
+            android:textColor="@color/color_tab_selected"
+            android:text="@string/chat_tab_contacts" />
+
+        <RadioButton
+            android:id="@+id/rb_group_chat_title"
+            style="@style/radion_btn_style"
+            android:drawableTop="@drawable/chat"
+            android:textColor="@color/color_tab_selected"
+            android:text="@string/chat_tab_group" />
+
+        <RadioButton
+            android:id="@+id/rb_home_chat_title"
+            style="@style/radion_btn_style"
+            android:drawableTop="@drawable/home"
+            android:textColor="@color/color_tab_selected"
+            android:text="@string/chat_tab_home" />
+    </RadioGroup>
+</LinearLayout>

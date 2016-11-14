@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+    <RelativeLayout
+        android:id="@+id/rl_message_item_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <video.itguy.wxlikevideo.views.ScalableVideoView
+            android:id="@+id/sv_message_item_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center"
+            app:scalableType="CENTER_CROP" />
+        <video.itguy.wxlikevideo.views.MsgThumbImageView
+            android:id="@+id/thumb_message_item_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:padding="0dip"
+            android:visibility="gone"
+            android:background="@color/b_tm_black"
+            android:scaleType="centerCrop" />
+        <ImageView
+            android:id="@+id/cover_message_item_video"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/play_message_item_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/empty"
+            android:focusable="false"
+            android:gravity="center"
+            android:scaleType="center"
+            android:src="@drawable/im_play_btn_select" />
+    </LinearLayout>
+    <include layout="@layout/im_message_item_thumb_progress_bar_text"/>
+
+</FrameLayout>

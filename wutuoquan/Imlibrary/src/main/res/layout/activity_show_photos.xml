@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowPhotosActivity" >
+
+    <com.imtest.chat.view.HackyViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.imtest.chat.view.HackyViewPager>
+
+    <RelativeLayout
+        android:id="@+id/imgs_operator"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#55000000"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/imgs_tv"
+            style="@style/showPhoto_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="2/8" />
+
+     <TextView
+            android:id="@+id/setDefault_tv"
+            style="@style/showPhoto_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgs_tv"
+            android:layout_centerHorizontal="true"
+            android:text="@string/show_tv_setdefault_1" /> 
+
+        <TextView
+            android:id="@+id/changeImage_tv"
+            style="@style/showPhoto_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/imgs_tv"
+            android:text="@string/show_tv_changeimg_1" />
+
+        <ImageButton
+            android:id="@+id/btnDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/imgs_tv"
+            android:background="@color/tm"
+            android:src="@drawable/show_del_btn" />
+    </RelativeLayout>
+
+</RelativeLayout>

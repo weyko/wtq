@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/pb_load_local"
+        style="@style/chat_progress"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerInParent="true"
+        android:visibility="visible" />
+
+    <com.imtest.chat.view.HackyViewPager
+        android:id="@+id/showphoto_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </com.imtest.chat.view.HackyViewPager>
+
+    <RelativeLayout
+        android:id="@+id/loy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/b_tm_black"
+        android:padding="10dp"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/btn_chat_copy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:src="@drawable/selector_chat_copy_1" />
+
+            <ImageView
+                android:id="@+id/btn_chat_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:src="@drawable/selector_chat_save_1" />
+
+            <ImageView
+                android:id="@+id/btn_chat_transpondl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:src="@drawable/selector_chat_transpond_1" />
+
+            <ImageView
+                android:id="@+id/btn_chat_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onClick"
+                android:padding="10dp"
+                android:src="@drawable/selector_chat_delete_1" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btn_chat_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:onClick="onClick"
+            android:padding="10dp"
+            android:src="@drawable/ic_chat_menu" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shop_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/circles_shop_banner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/name_shop_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circles_shop_banner"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_cont" />
+
+        <ImageView
+            android:id="@+id/copy_shop_banner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/circles_shop_banner"
+            android:src="@drawable/ic_chat_copy1" />
+    </RelativeLayout>
+
+</RelativeLayout>

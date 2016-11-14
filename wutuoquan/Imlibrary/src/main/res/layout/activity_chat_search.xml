@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/cancal_chat_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:padding="8dp"
+            android:text="@string/cancel"
+            android:textColor="@color/text_color_title"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/search_chat_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="3dp"
+            android:layout_toLeftOf="@+id/cancal_chat_search"
+            android:background="@drawable/white_radious5"
+            android:drawableLeft="@drawable/ic_search"
+            android:drawablePadding="8dp"
+            android:padding="5dp"
+            android:singleLine="true"
+            android:textColor="@color/text_color_title"
+            android:textColorHint="@color/text_color_mark"
+            android:textSize="16sp" >
+            <requestFocus />
+        </EditText>
+
+        <ImageView
+            android:id="@+id/clear_chat_search"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_alignRight="@+id/search_chat_search"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/btn_cancel"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView style="@style/a_line" />
+
+    <ListView
+        android:id="@+id/list_chat_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:listSelector="@null"
+        android:visibility="gone" >
+    </ListView>
+
+    <include
+        android:id="@+id/view_toast_chat_search"
+        layout="@layout/layout_toast_page"
+        android:visibility="gone" />
+
+</LinearLayout>

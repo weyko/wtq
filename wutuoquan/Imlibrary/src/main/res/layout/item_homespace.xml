@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listitem_selector"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/head_item_homespace"
+        android:layout_width="@dimen/friends_list_item_avatar_width"
+        android:layout_height="@dimen/friends_list_item_avatar_width"
+        android:layout_margin="10dp"
+        android:src="@drawable/default_head" />
+
+    <LinearLayout
+        android:id="@+id/ll_item_homespace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/head_item_homespace"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nickname_item_homespace"
+            style="@style/contentText"
+            android:singleLine="true"
+            android:textColor="@color/color_activity_blue_bg" />
+
+        <com.imtest.chat.view.MoreTextView
+            android:id="@+id/content_item_homespace"
+            style="@style/contentText"
+            android:layout_marginTop="16dp"
+            android:ellipsize="end"
+            android:maxLines="6" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/imgs_item_homespace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/play_item_homesapce"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:clickable="true"
+                android:layout_marginRight="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/im_video_play_icon" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/time_item_homespace"
+                style="@style/contentText"
+                android:layout_weight="1"
+                android:textColor="@color/text_color_mark"
+                android:textSize="@dimen/text_size_toast" />
+
+            <ImageView
+                android:id="@+id/chat_item_homespace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="@drawable/ic_comment" />
+        </LinearLayout>
+
+        <com.imtest.chat.view.DisableScrollListView
+            android:id="@+id/comment_list_item_homespace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"></com.imtest.chat.view.DisableScrollListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/margin_item_homespace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_item_homespace"
+        android:orientation="vertical">
+
+        <ImageView style="@style/a_line" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/bg_color" />
+
+        <ImageView style="@style/a_line" />
+    </LinearLayout>
+</RelativeLayout>

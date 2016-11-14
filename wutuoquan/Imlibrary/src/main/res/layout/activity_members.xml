@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/view_title_members"
+        layout="@layout/layout_title" />
+
+    <ImageView style="@style/a_line" />
+
+    <include
+        android:id="@+id/view_search_members"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_title_members"
+        layout="@layout/layout_search_members"
+        android:clickable="true" />
+
+    <include
+        android:id="@+id/menu_select_members"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/layout_select_members" />
+
+    <ListView
+        android:id="@+id/refresh_list_members"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/menu_select_members"
+        android:layout_below="@+id/view_search_members"
+        android:divider="@null"
+        android:fillViewport="true" >
+    </ListView>
+
+    <include
+        android:id="@+id/view_toast_members"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/view_search_members"
+        layout="@layout/layout_toast_page"
+        android:visibility="gone" />
+
+    <chat.view.SubSideBar
+        android:id="@+id/sideBar_members"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menu_select_members"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/view_search_members"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

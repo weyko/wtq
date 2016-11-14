@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/layout_title" />
+
+    <chat.view.pullview.PullToRefreshLayout
+        android:id="@+id/ph_chat_groupinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color"
+        android:orientation="vertical" >
+
+        <include layout="@layout/refresh_head" />
+
+        <chat.view.pullview.PullableGridView
+            android:id="@+id/gv_members_group_invite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="5"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" 
+            android:scrollbars="none">
+        </chat.view.pullview.PullableGridView>
+
+        <include layout="@layout/load_more" />
+    </chat.view.pullview.PullToRefreshLayout>
+
+    <include
+        android:id="@+id/view_toast_group_more"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/layout_toast_page"
+        android:visibility="gone" />
+</LinearLayout>

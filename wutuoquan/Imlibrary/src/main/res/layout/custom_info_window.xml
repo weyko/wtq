@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#50000000"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:lines="2"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_cont"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/snippet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:maxWidth="200dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_mark" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white" />
+
+    <TextView
+        android:id="@+id/tv_goto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawablePadding="10dp"
+        android:drawableTop="@drawable/ic_chat_transpond"
+        android:padding="10dp"
+        android:text="@string/map_go_1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_cont" >
+    </TextView>
+
+</LinearLayout>

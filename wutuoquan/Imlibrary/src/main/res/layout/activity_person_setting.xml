@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setting="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <com.imtest.chat.view.SettingItemView
+        android:id="@+id/sv_remark_person_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        setting:title="@string/person_setting_remark" />
+
+    <ImageView style="@style/a_line" />
+
+    <com.imtest.chat.view.SettingItemView
+        android:id="@+id/sv_star_person_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        setting:on_off="true"
+        setting:title="@string/person_setting_star" />
+
+    <ImageView style="@style/a_line" />
+
+    <com.imtest.chat.view.SettingItemView
+        android:id="@+id/sv_limit_person_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        setting:on_off="true"
+        setting:title="@string/person_setting_limit_look" />
+
+    <ImageView style="@style/a_line" />
+
+    <TextView
+        android:id="@+id/tv_delete_person_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_red_selector"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="onClick"
+        android:padding="10dp"
+        android:text="@string/person_setting_delete"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_size_title" />
+</LinearLayout>

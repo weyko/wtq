@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:setting="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <LinearLayout
+        android:id="@+id/main_group_invite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/top_hint_group_invite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/text_size_toast" />
+
+        <com.imtest.chat.view.CircleImageView
+            android:id="@+id/avatar_group_invite"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_group" />
+
+        <TextView
+            android:id="@+id/remark_group_invite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:paddingLeft="100dp"
+            android:paddingRight="100dp"
+            android:textColor="@color/text_color_mark"
+            android:textSize="@dimen/text_size_toast" />
+
+        <TextView
+            android:id="@+id/look_group_invite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/btn_maincolor_unselect"
+            android:clickable="true"
+            android:paddingBottom="8dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:paddingTop="8dp"
+            android:text="@string/chat_group_invite_look"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/text_size_cont"
+            android:visibility="gone" />
+
+        <com.imtest.chat.view.SettingItemView
+            android:id="@+id/members_group_invite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/bg_color"
+            setting:title="@string/chat_group_invite_members" />
+
+        <LinearLayout
+            android:id="@+id/ll_group_members_invite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"></LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/view_toast_group_invite"
+        layout="@layout/layout_toast_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="top"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:paddingLeft="25dip"
+    android:paddingRight="25dip" >
+
+    <LinearLayout
+        android:id="@+id/dialog_generic_layout_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical"
+        android:padding="0.5dp" >
+
+        <LinearLayout
+            android:id="@+id/dialog_generic_layout_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog_top"
+            android:orientation="vertical" >
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fadingEdge="none" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp" >
+
+                    <chat.view.HandyTextView
+                        android:id="@+id/dialog_generic_htv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:textColor="@color/text_color_title"
+                        android:textSize="@dimen/text_size_title" />
+
+                    <chat.view.HandyTextView
+                        android:id="@+id/dialog_generic_htv_message"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="@dimen/editText_padding"
+                        android:textColor="@color/text_color_title"
+                        android:textSize="@dimen/text_size_cont" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dialog_generic_layout_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.5dp"
+            android:background="@drawable/bg_dialog_butom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible" >
+
+            <Button
+                android:id="@+id/dialog_generic_btn_button1"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:background="@drawable/bg_button_dialog_1"
+                android:padding="@dimen/editText_padding"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/text_size_top"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="fill_parent"
+                android:background="@color/bg_line" />
+
+            <Button
+                android:id="@+id/dialog_generic_btn_button2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button_dialog_2"
+                android:padding="@dimen/editText_padding"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/text_size_top"
+                android:visibility="visible" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" android:layout_gravity="center">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/nim_message_item_gif_body"
+        android:layout_width="@dimen/chat_gif_width"
+        android:layout_height="@dimen/chat_gif_width"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY" />
+</RelativeLayout>

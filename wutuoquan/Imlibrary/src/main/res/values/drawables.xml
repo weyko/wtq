@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tm" type="drawable">#00000000</item>
+    <drawable name="transparent">@color/tm</drawable>
+</resources>

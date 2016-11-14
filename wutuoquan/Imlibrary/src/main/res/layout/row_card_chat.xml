@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_main_card_chat"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_max_card_chat"
+        android:layout_width="wrap_content"
+        android:maxWidth="250dp"
+        android:minWidth="250dp"
+        android:layout_height="1px"/>
+
+    <LinearLayout
+        android:id="@+id/ll_bg_card_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/ll_shopinfo_card_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/icon_shop_coupon"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:clickable="false"
+                android:scaleType="fitXY"
+               />
+
+            <TextView
+                android:id="@+id/title_chat_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:singleLine="true"
+                android:textColor="@color/text_color_title"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_exchange_card_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/view_chat_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/icon_chat_coupon"
+                    android:layout_width="75dp"
+                    android:layout_height="85dp"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="5dp"
+                    android:clickable="false"
+                    android:scaleType="centerCrop"
+                    />
+
+                <TextView
+                    android:id="@+id/content_chat_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/icon_chat_coupon"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@+id/icon_chat_coupon"
+                    android:maxLines="2"
+                    android:textColor="@color/text_color_title"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/num_chat_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/icon_chat_coupon"
+                    android:layout_alignLeft="@+id/content_chat_coupon"
+                    android:layout_below="@+id/content_chat_coupon"
+                    android:gravity="bottom"
+                    android:maxLines="2"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/text_color_title"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_get_send_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="立即领取"
+                android:textColor="@color/text_color_title"
+                android:textSize="@dimen/text_size_top"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_coupon_card_chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_name_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:textColor="#5ABAF8"
+                android:textSize="@dimen/text_size_top" />
+
+            <TextView
+                android:id="@+id/tv_content_coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:textColor="@color/text_color_mark"
+                android:textSize="@dimen/text_tab_11" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_validity"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center_vertical"
+        android:paddingBottom="2dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_tab_11" />
+</LinearLayout>

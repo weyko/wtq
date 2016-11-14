@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+    <View
+        style="@style/a_line"
+        android:layout_marginTop="20dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:onClick="stratPersonal"
+        android:orientation="horizontal"
+        android:padding="@dimen/LoyPadding">
+
+        <com.imtest.chat.view.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="@dimen/personal_text_padding"
+            android:layout_marginRight="@dimen/personal_text_padding"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_head" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/avatar"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/personal_text_padding"
+            android:paddingTop="@dimen/personal_checkbox_padding">
+
+            <TextView
+                android:id="@+id/home_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="200dp"
+                android:singleLine="true"
+                android:text=""
+                android:textSize="@dimen/text_size_title_btn" />
+
+            <TextView
+                android:id="@+id/home_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID："
+                android:textColor="@color/text_color_mark"
+                android:textSize="@dimen/text_size_mark" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/home_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/personal_image_padding"
+            android:src="@drawable/arrows_right" />
+    </RelativeLayout>
+
+    <View style="@style/a_line" />
+
+    <View
+        style="@style/a_line"
+        android:layout_marginTop="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/chat_pictures"
+        style="@style/Personal_Ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/chat_photowall_title"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_title_btn" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/arrows_right" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_p_c"
+        style="@style/a_line"
+        android:layout_marginLeft="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/delete_chat_records"
+        style="@style/Personal_Ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:onClick="onClick">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/empty_chats"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_title_btn" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/arrows_right" />
+    </RelativeLayout>
+
+    <View
+        style="@style/a_line"
+        android:layout_marginLeft="20dp" />
+
+    <RelativeLayout
+        style="@style/Personal_Ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick">
+
+        <TextView
+            android:id="@+id/tvActivityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/chat_to_top"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_title_btn" />
+
+        <CheckBox
+            android:id="@+id/set_chat_istop"
+            style="@style/setting_onoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line_c_m"
+        style="@style/a_line"
+        android:layout_marginLeft="20dp" />
+
+    <RelativeLayout
+        android:id="@+id/chatsetting_DND"
+        style="@style/Personal_Ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="@string/chat_not_disturb"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_title_btn" />
+
+        <CheckBox
+            android:id="@+id/set_chat_forbid"
+            style="@style/setting_onoff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <View style="@style/a_line" />
+
+</LinearLayout>

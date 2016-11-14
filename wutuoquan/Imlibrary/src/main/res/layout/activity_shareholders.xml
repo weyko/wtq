@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_shareholders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_gudonghui"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/status_bar_height">
+
+        <ImageView
+            android:id="@+id/head_shareholders"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="@dimen/title_high"
+            android:src="@drawable/default_head" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_shareholders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_shareholders"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/new_shareholders"
+            style="@style/radion_btn_style"
+            android:drawableTop="@drawable/ic_new"
+            android:onClick="onClick"
+            android:text="@string/sharesholders_new"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_toast" />
+
+        <RadioButton
+            android:id="@+id/propose_shareholders"
+            style="@style/radion_btn_style"
+            android:drawableTop="@drawable/ic_gudongtiyi"
+            android:onClick="onClick"
+            android:text="@string/sharesholders_propose"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_toast" />
+
+        <RadioButton
+            android:id="@+id/major_shareholders"
+            style="@style/radion_btn_style"
+            android:drawableTop="@drawable/ic_zhongdashixiang"
+            android:onClick="onClick"
+            android:text="@string/sharesholders_major"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_toast" />
+
+        <RadioButton
+            android:id="@+id/report_shareholders"
+            style="@style/radion_btn_style"
+            android:drawableTop="@drawable/ic_caiwubaobiao"
+            android:onClick="onClick"
+            android:text="@string/sharesholders_report"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_toast" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/dir_shareholders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_shareholders"
+        android:background="@color/bg_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="14dp"
+            android:background="@color/main_color" />
+
+        <TextView
+            style="@style/contentText"
+            android:padding="10dp"
+            android:text="@string/str_structure"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+    <ExpandableListView
+        android:id="@+id/elv_shareholders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dir_shareholders"
+        android:background="@color/bg_color"
+        android:groupIndicator="@null"
+        android:scrollbars="none"></ExpandableListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/status_bar_height"
+        android:background="@color/tm"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/back_shareholders"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:background="@drawable/menu_btn_selector"
+            android:src="@drawable/btn_back_white" />
+
+        <TextView
+            android:id="@+id/title_shareholders"
+            style="@style/titleText"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/menu_shareholders"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/menu_btn_selector"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_more" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <ImageView style="@style/a_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <com.imtest.chat.view.PasteEditText
+            android:id="@+id/reply_et"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/card_unselect"
+            android:hint="@string/say_something"
+            android:maxLength="200"
+            android:maxLines="5"
+            android:minHeight="34dp"
+            android:padding="5dp"
+            android:paddingLeft="5dp"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_cont" />
+
+        <CheckBox
+            android:id="@+id/reply_expression_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:button="@drawable/chat_emoticon"
+            android:checked="false" />
+        <Button
+            android:id="@+id/reply_send_bt"
+            android:layout_width="50dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/bg_gray_white_select"
+            android:text="@string/chat_record_to_send"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_cont" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/expression_container"
+        layout="@layout/face_viewpager"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#30000000"
+    android:orientation="vertical" >
+
+    <View style="@style/a_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/chat_create_talk"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/listitem_selector"
+            android:drawableTop="@drawable/txl_add_group"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/chat_title_create_group"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_title" />
+
+        <TextView
+            android:id="@+id/chat_create_friends"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/listitem_selector"
+            android:drawableTop="@drawable/txl_add_user"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/chat_title_add_friend"
+            android:textColor="@color/text_color_title"
+            android:textSize="@dimen/text_size_title" />
+    </LinearLayout>
+
+    <View style="@style/a_line" />
+
+</LinearLayout>

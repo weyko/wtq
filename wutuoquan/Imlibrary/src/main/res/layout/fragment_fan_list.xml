@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/view_contacts"
+        layout="@layout/layout_title" />
+
+    <EditText
+        android:id="@+id/search_fan_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_contacts"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        android:layout_toLeftOf="@+id/search_friend_cancel"
+        android:background="@drawable/white_radious5"
+        android:drawableLeft="@drawable/ic_search"
+        android:drawablePadding="10dp"
+        android:hint="@string/search_fan_list"
+        android:imeOptions="actionSearch"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:singleLine="true"
+        android:focusable="false"
+        android:clickable="true"
+        android:textColor="@color/text_color_title"
+        android:textColorHint="@color/text_color_mark"
+        android:textSize="@dimen/text_size_title"></EditText>
+
+    <ImageView
+        android:id="@+id/line_top_fan_list"
+        style="@style/a_line"
+        android:layout_below="@+id/search_fan_list" />
+
+    <TextView
+        android:id="@+id/tv_newfriend_fan_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line_top_fan_list"
+        android:background="@color/white"
+        android:drawableLeft="@drawable/ic_new_friend"
+        android:drawablePadding="@dimen/radion_padding"
+        android:gravity="center_vertical"
+        android:padding="@dimen/radion_padding"
+        android:text="@string/contacts_newfriend"
+        android:clickable="true"
+        android:textColor="@color/text_color_title"
+        android:textSize="@dimen/text_size_title" />
+
+    <ImageView
+        android:id="@+id/line_bottom_fan_list"
+        style="@style/a_line"
+        android:layout_below="@+id/tv_newfriend_fan_list" />
+    <include
+        android:id="@+id/view_pull_fan_list"
+        layout="@layout/layout_pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_color"
+        android:layout_above="@+id/menu_select_members"
+        android:layout_below="@+id/line_bottom_fan_list" />
+
+    <chat.view.SubSideBar
+        android:id="@+id/sideBar"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/menu_select_members"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/search_fan_list"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/tv_toast_fan_list"
+        style="@style/toast_subsideBar"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

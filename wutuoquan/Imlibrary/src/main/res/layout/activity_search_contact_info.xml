@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@color/bg_color">
+    <include layout="@layout/layout_title" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/iv_avatar_contact_search"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_marginRight="16dp"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:layout_toRightOf="@+id/iv_avatar_contact_search"
+            android:id="@+id/tv_name_contact_search"
+            style="@style/contentText" />
+        <ImageView
+            android:layout_toRightOf="@+id/tv_name_contact_search"
+            android:id="@+id/iv_sex_contact_search"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:scaleType="centerCrop"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_remark_contact_search"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        style="@style/contentText" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tv_head_address_contact_search"
+            android:text="地区"
+            android:layout_width="100dp"
+            android:padding="10dp"
+            style="@style/contentText" />
+        <TextView
+            android:id="@+id/tv_address_contact_search"
+            android:layout_toRightOf="@+id/tv_head_address_contact_search"
+            android:padding="10dp"
+            style="@style/contentText" />
+        <ImageView
+            android:id="@+id/iv_line_contact_search"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/tv_address_contact_search"
+            style="@style/a_line" />
+        <TextView
+            android:id="@+id/tv_head_sign_contact_search"
+            android:layout_below="@+id/iv_line_contact_search"
+            android:padding="10dp"
+            android:layout_width="100dp"
+            android:text="个性签名"
+            style="@style/contentText" />
+        <TextView
+            android:id="@+id/tv_sign_contact_search"
+            android:layout_toRightOf="@+id/tv_head_sign_contact_search"
+            android:layout_below="@+id/iv_line_contact_search"
+            android:padding="10dp"
+            style="@style/contentText" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/tv_add_contact_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_margin="16dp"
+        android:padding="10dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_title_btn"
+        android:background="@drawable/bg_blue_select"
+        android:text="@string/chat_search_contact_btn_str"/>
+</LinearLayout>
